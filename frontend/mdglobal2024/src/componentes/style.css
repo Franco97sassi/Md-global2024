@@ -17,7 +17,7 @@
     position: relative;
     margin: 1rem;
   }
-  
+
   .hamburguesa-icon {
     cursor: pointer;
     font-size: 24px;
@@ -33,3 +33,7 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   }
   
+
+  .seccion{
+    color: rgba(143, 13, 60, 1);
+  }

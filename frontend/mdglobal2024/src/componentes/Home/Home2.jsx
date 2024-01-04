@@ -1,5 +1,6 @@
 import construccion2 from "../../assets/Home/home2.png";
 import { isMobile } from "react-device-detect";
+import './styles.css'
 function Home2() {
   return (
     <div
@@ -23,7 +24,7 @@ function Home2() {
         }}
       >
         <span
-          className="texto1"
+          className="textoo1"
           style={{
             fontWeight: "bold",
 
@@ -33,7 +34,7 @@ function Home2() {
           ACERCA DE MD GLOBAL
         </span>
         <span
-          className="texto2"
+          className="textoo2"
           style={{
 
             fontWeight: "200",
@@ -51,18 +52,20 @@ function Home2() {
         </span>
 
         <span
-          className="texto1"
+          className="textoo1"
           style={{
             fontWeight: "500",
-            lineHeight: '45px',
-            maxWidth: isMobile ? '300px' : null
+
+            fontWeight: '600',
+            maxWidth: isMobile ? '320px' : null,
+            marginBottom: '10px'
 
         
           }}
         >
           Conoce nuestra nueva herramienta de cotización <br />
         </span>
-        <span className="texto2"> Cotiza con inteligencia</span>
+        <span className="textoo2"> Cotiza con inteligencia</span>
         <div
           style={{
             display: "flex",
@@ -90,7 +93,7 @@ function Home2() {
           </button>
         </div>
       </div>
-      <div style={{ marginTop: "5rem", marginRight: "5%" }}>
+      <div style={{ marginTop: isMobile ? '0.5rem' : "5rem", marginRight: "5%" }}>
         <img  style={{height: isMobile ? '300px' : null ,
       width: isMobile ? '350px' : null}} className="fotohome1" src={construccion2} alt="" />
       </div>

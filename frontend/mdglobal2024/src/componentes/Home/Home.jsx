@@ -5,7 +5,7 @@ import construccion from "../../assets/Home/homeConstruccion.png";
 import Home3 from "./Home3";
 import rectangulo from "../../assets/Home/rectangulo.png";
 import Footer from "../Footer";
-import "./style.css";
+import "./styles.css";
 import HamburguesaMenu from "../Menu";
 
 function Home() {
@@ -36,7 +36,7 @@ function Home() {
                 color: "#8F0D3C",
               }}
             >
-              <span className="texto2"
+              <span className="textoo1"
                 style={{
 
                   fontWeight: "bold",
@@ -48,7 +48,7 @@ function Home() {
                 OPERACIONES DE COMERCIO <br />
                 EXTERIOR.
               </span>
-              <span className="texto2" style={{ lineHeight: "25px" , maxWidth: isMobile ? '300px' : null}}>
+              <span className="textoo2" style={{ lineHeight: "25px" , maxWidth: isMobile ? '300px' : null}}>
                 En MD Global Trade Services somos un equipo de trabajo que{" "}
                 <br />
                 encuentra soluciones aduaneras para su cadena logística.
@@ -58,9 +58,10 @@ function Home() {
                   display: "flex",
                   flexDirection: isMobile ? 'column' :  "row",
                   alignItems: isMobile ? 'left' : "center",
-
+                  alignSelf: 'center' ,
                   marginTop: "1rem",
                   justifyContent: "left",
+                  gap: '1rem'
                 }}
               >
                 <button
@@ -95,7 +96,7 @@ function Home() {
                 </button>
               </div>
             </div>
-            <div style={{ marginTop: "5rem", marginRight: "5%" }}>
+            <div style={{ marginTop: isMobile ? '0.5rem' : "5rem", marginRight: "5%" }}>
               <img className="fotohome1" src={construccion} alt="" style={{height: isMobile ? '300px' : null ,
             width: isMobile ? '350px' : null }}/>
             </div>

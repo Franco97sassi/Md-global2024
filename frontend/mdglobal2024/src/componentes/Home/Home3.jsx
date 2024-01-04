@@ -3,7 +3,7 @@ import casita from "../../assets/Home/casita.png";
 import martillo from "../../assets/Home/martillo.png";
 import { useState } from "react";
 import { isMobile } from "react-device-detect";
-import './style.css'
+import './styles.css'
 function Home3() {
     const [isHovered1, setIsHovered1] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);

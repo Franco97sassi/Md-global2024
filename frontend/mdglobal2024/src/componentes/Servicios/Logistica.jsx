@@ -1,15 +1,14 @@
 import logistica from "../../assets/servicios/logistica.png";
-
+import './style.css'
 function Logistica() {
   return (
-    <div
+    <div className="carousel"
       style={{
 
         borderRadius: '3rem',
         boxShadow:
           "0px 14px 20px 5px rgba(0, 0, 0, 0.25) , 0px -6px 2px 0px rgba(0, 0, 0, 0.25) inset",
-        width: "1803px",
-        height: "847px",
+
         display: "flex",
         flexDirection: "row",
         justifyContent: "space-between",
@@ -19,17 +18,16 @@ function Logistica() {
       }}
     >
       <div>
-        <img
-          style={{ width: "757px", height: "654px" }}
+      <img className="fotito"
           src={logistica}
           alt=""
         />
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <span style={{ fontWeight: "bold", fontSize: "48px" }}>
+        <span className="texto1" style={{ fontWeight: "bold" }}>
         LOGÍSTICA
         </span>
-        <span style={{ fontWeight: "300", fontSize: "30px" , marginRight: '15%'}}>
+        <span  className="texto2" style={{ fontWeight: "300",  marginRight: '15%'}}>
         Le ayudamos a agilizar cruces, coordinar 
 cargas directas, traslados o cualquier necesidad 
 logística que tenga.

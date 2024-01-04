@@ -44,7 +44,7 @@ function Home() {
                 OPERACIONES DE COMERCIO <br />
                 EXTERIOR.
               </span>
-              <span style={{ fontSize: "25px", lineHeight: "25px" }}>
+              <span className="texto2" style={{ lineHeight: "25px" }}>
                 En MD Global Trade Services somos un equipo de trabajo que{" "}
                 <br />
                 encuentra soluciones aduaneras para su cadena logística.

@@ -38,6 +38,7 @@ function Home2() {
             fontWeight: "200",
             lineHeight: "25px",
             marginBottom: "1rem",
+            maxWidth: '50rem'
           }}
         >
           Fue establecido con el objetivo de complementar las operaciones de
@@ -51,11 +52,12 @@ function Home2() {
           className="texto1"
           style={{
             fontWeight: "bold",
+            lineHeight: '45px'
 
-            whiteSpace: "nowrap",
+        
           }}
         >
-          Conoce nuestra nueva herramienta de cotización
+          Conoce nuestra nueva herramienta de cotización <br />
         </span>
         <span className="texto2"> Cotiza con inteligencia</span>
         <div

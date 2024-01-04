@@ -2,12 +2,13 @@ import logo from "../assets/Footer/logo.png";
 import facebook from  "../assets/Footer/facebook.png";
 import instagram from  "../assets/Footer/instagram.png";
 import inLogo from  "../assets/Footer/inLogo.png";
+import './style.css'
 function Footer() {
   return (
-    <div
+    <div className="footerAltura"
       style={{
         background: "linear-gradient(180deg, #8F96A4 0%, #323740 100%)",
-        height: "211px",
+  
         width: '100vw',
         display: "flex",
         flexDirection: "row",

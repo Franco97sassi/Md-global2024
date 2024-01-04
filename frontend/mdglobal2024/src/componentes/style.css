@@ -1,0 +1,12 @@
+@media (max-width: 1920px) {
+.footerAltura{
+    height: 211px;
+}
+  }
+
+
+  @media (max-width: 1360px) {
+.footerAltura{
+    height: 150px;
+}
+  }

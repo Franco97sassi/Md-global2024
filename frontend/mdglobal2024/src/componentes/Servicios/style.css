@@ -1,0 +1,41 @@
+@media (max-width: 1920px) {
+  .carousel {
+    width: 1600px;
+    height: 847px;
+  }
+  .fotito {
+    width: 757px;
+    height: 654px;
+  }
+  .texto1 {
+    font-size: 50px;
+  }
+  .texto2 {font-size: 30px;}
+  .auditoria{
+    width: 254px;
+     height: 654px
+
+  }
+}
+
+@media (max-width: 1360px) {
+  .carousel {
+    width: 1200px;
+    height: 447px;
+  }
+  .fotito {
+    width: 450px;
+    height: 400px;
+  }
+  .texto1 {
+    font-size: 25px;
+  }
+  .texto2 {font-size: 20px;}
+  .auditoria{
+    width: 180px;
+     height: 350px
+
+  }
+
+
+}

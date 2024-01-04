@@ -10,11 +10,13 @@ function Navbar() {
         fontSize: "22px",
         lineHeight: "23.94px",
         alignItems: "center",
-        justifyContent: "space-between",
+
         marginTop: "35px",
         top: 0,
         position: "absolute",
-        marginLeft: '3%'
+        marginLeft: '3%',
+        width: '100vw',
+        gap: '3rem'
       }}
     >
       <div
@@ -24,7 +26,7 @@ function Navbar() {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          marginLeft: "4rem",
+          marginLeft: "1%",
         }}
       >
         <img src={logo} alt="" style={{ width: "69.25px", height: "65px" }} />
@@ -48,22 +50,22 @@ function Navbar() {
       <Link
         to={"/home"}
         className="comun"
-        style={{ marginLeft: "21rem", marginRight: "6rem" 
+        style={{
         }}
       >
         Home
       </Link>
 
-      <Link to={"/servicios"} className="comun" style={{ marginRight: "6rem" }}>
+      <Link to={"/servicios"} className="comun" style={{  }}>
         Servicios
       </Link>
-      <Link   to={'/cotizar'}className="comun" style={{ marginRight: "6rem" }}>
+      <Link   to={'/cotizar'}className="comun" style={{  }}>
         Cotizar
       </Link>
-      <Link   to={'/aduanas'}className="comun" style={{ marginRight: "6rem" }}>
+      <Link   to={'/aduanas'}className="comun" style={{  }}>
         Aduanas
       </Link>
-      <Link  to={'/nosotros'}className="comun" style={{ marginRight: "6rem" }}>
+      <Link  to={'/nosotros'}className="comun" style={{  }}>
         Nosotros
       </Link>
     </div>

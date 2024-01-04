@@ -1,34 +1,63 @@
 .botonHome1 {
-    background-color: #8F0D3C;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: ease 0.3s;
-
+  background-color: #8f0d3c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: ease 0.3s;
 }
 
 .botonHome1:hover {
-    background-color: #C60E50;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
-    transition: ease 0.3s;
-    
+  background-color: #c60e50;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+  transition: ease 0.3s;
 }
 
 .botonHome2 {
-    color: #8F0D3C;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: background-color 0.3s ease, color 0.3s ease;
+  color: #8f0d3c;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .botonHome2:hover {
-    background-color: #C60E50;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
-    color: white;
+  background-color: #c60e50;
+  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.4);
+  color: white;
 }
 
-
-.comun{
-    color: rgba(108, 108, 108, 1);
+.comun {
+  color: rgba(108, 108, 108, 1);
 }
 .comun:hover {
-    color: black;
-    
+  color: black;
+}
+
+@media (max-width: 1920px) {
+  .fotohome1 {
+    width: 886px;
+    height: 753px;
   }
+
+  .texto1{
+    font-size:36px ;
+  }
+  .texto2 {
+    font-size: 30px;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 1360px) {
+  .fotohome1 {
+    height: 453px;
+    width: 586px;
+  }
+  .texto {
+    margin-left: 2%;
+   
+  }
+  .texto1 {
+    font-size: 25px;
+  }
+  .texto2 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+}

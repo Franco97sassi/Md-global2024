@@ -1,5 +1,6 @@
 import { Link , BrowserRouter , Route , Routes} from "react-router-dom"
 import Home from "./componentes/Home/Home"
+import Servicios from "./componentes/Servicios/Servicios"
 
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Route path="/home" element={<Home></Home>}>  </Route>
 
       <Route path="/" element={<Home></Home>}>  </Route>
+      <Route path="/servicios" element={<Servicios></Servicios>} >  </Route>
 
      </Routes>
     </BrowserRouter>

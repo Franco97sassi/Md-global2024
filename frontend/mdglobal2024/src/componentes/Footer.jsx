@@ -8,6 +8,7 @@ function Footer() {
       style={{
         background: "linear-gradient(180deg, #8F96A4 0%, #323740 100%)",
         height: "211px",
+        width: '100vw',
         display: "flex",
         flexDirection: "row",
         alignItems: 'center',
@@ -15,7 +16,7 @@ function Footer() {
         justifyContent: "space-between",
       }}
     >
-        <div style={{ display: 'flex', alignItems: 'center' , marginLeft: '5%' }}>
+        <div style={{ display: 'flex', alignItems: 'center' , marginLeft: '5%'  }}>
         <img src={logo} alt="" />
         <span className="tituloo"
           style={{

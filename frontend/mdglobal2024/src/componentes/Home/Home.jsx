@@ -22,7 +22,7 @@ function Home() {
               flexDirection: isMobile ? 'column' :  "row",
               gap: '1rem',
               marginBottom: '2rem',
-              alignItems: isMobile ? 'center' : null
+              alignItems: isMobile ? 'center' : 'center'
           
             }}
           >
@@ -107,7 +107,7 @@ function Home() {
             backgroundSize: "cover",
             backgroundPosition: "center",
             height: isMobile ? '1500px' : "835px",
-            width: "auto",
+            width: "100vw",
           }}
         >
           <Home3></Home3>

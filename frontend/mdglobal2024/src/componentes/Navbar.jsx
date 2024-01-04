@@ -15,7 +15,7 @@ function Navbar() {
         top: 0,
         position: "absolute",
         marginLeft: '3%',
-        width: '100vw',
+        width: 'auto',
         gap: '3rem'
       }}
     >

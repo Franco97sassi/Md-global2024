@@ -7,7 +7,7 @@ function Home2() {
         display: "flex",
         flexDirection: isMobile ? 'column' : "row",
         gap: "1rem",
-        alignItems: isMobile ? 'center' : null
+        alignItems: isMobile ? 'center' : 'center'
       }}
     >
       <div

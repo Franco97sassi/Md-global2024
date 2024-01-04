@@ -42,6 +42,17 @@
     font-size: 25px;
     line-height: 30px;
   }
+  .conteiner {
+    gap: 17rem;
+    margin-top: 10rem
+  }
+  .textoHOME3-2{
+    font-size: 30px;
+  }
+  .textoHOME3{
+    font-size: 50px;
+    margin-top: 10rem;
+  }
 }
 
 @media (max-width: 1360px) {
@@ -60,4 +71,17 @@
     font-size: 25px;
     line-height: 25px;
   }
+  .conteiner {
+    gap: 4rem;
+    margin-top: 5rem
+  }
+  .textoHOME3-2{
+    font-size: 20px;
+  }
+  .textoHOME3{
+    font-size: 30px;
+    margin-top: 5rem;
+  }
+
+
 }

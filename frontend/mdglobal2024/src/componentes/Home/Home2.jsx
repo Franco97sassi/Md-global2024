@@ -1,11 +1,11 @@
 import construccion2 from "../../assets/Home/home2.png";
-
+import { isMobile } from "react-device-detect";
 function Home2() {
   return (
     <div
       style={{
         display: "flex",
-        flexDirection: "row",
+        flexDirection: isMobile ? 'column' : "row",
         gap: "1rem",
       }}
     >
@@ -38,7 +38,8 @@ function Home2() {
             fontWeight: "200",
             lineHeight: "25px",
             marginBottom: "1rem",
-            maxWidth: '50rem'
+            maxWidth: isMobile ? '300px' : '50rem'
+
           }}
         >
           Fue establecido con el objetivo de complementar las operaciones de
@@ -51,8 +52,9 @@ function Home2() {
         <span
           className="texto1"
           style={{
-            fontWeight: "bold",
-            lineHeight: '45px'
+            fontWeight: "500",
+            lineHeight: '45px',
+            maxWidth: isMobile ? '300px' : null
 
         
           }}
@@ -67,7 +69,7 @@ function Home2() {
             alignItems: "center",
 
             marginTop: "1rem",
-            justifyContent: "center",
+            justifyContent: "left",
           }}
         >
           <button
@@ -88,7 +90,8 @@ function Home2() {
         </div>
       </div>
       <div style={{ marginTop: "5rem", marginRight: "5%" }}>
-        <img className="fotohome1" src={construccion2} alt="" />
+        <img  style={{height: isMobile ? '300px' : null ,
+      width: isMobile ? '350px' : null}} className="fotohome1" src={construccion2} alt="" />
       </div>
     </div>
   );

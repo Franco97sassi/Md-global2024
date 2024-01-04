@@ -10,3 +10,25 @@
     height: 150px;
 }
   }
+
+
+
+  .hamburguesa-menu {
+    position: relative;
+  }
+  
+  .hamburguesa-icon {
+    cursor: pointer;
+    font-size: 24px;
+  }
+  
+  .menu-desplegable {
+    position: absolute;
+    top: 30px;
+    right: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  

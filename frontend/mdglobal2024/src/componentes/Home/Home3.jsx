@@ -2,7 +2,8 @@ import manito from "../../assets/Home/manito.png";
 import casita from "../../assets/Home/casita.png";
 import martillo from "../../assets/Home/martillo.png";
 import { useState } from "react";
-
+import { isMobile } from "react-device-detect";
+import './style.css'
 function Home3() {
     const [isHovered1, setIsHovered1] = useState(false);
     const [isHovered2, setIsHovered2] = useState(false);
@@ -38,28 +39,28 @@ function Home3() {
           color: "white",
         }}
       >
-        <span
+        <span className="textoHOME3"
           style={{
             fontWeight: "bold",
-            fontSize: "50px",
-            marginTop: "10rem",
+
+            maxWidth: isMobile ? '300px' : null,
             lineHeight: "50px",
           }}
         >
           Servicios de primera calidad <br />{" "}
         </span>
-        <span style={{ fontSize: "30px", fontWeight: "300" }}>
+        <span className="textoHOME3-2" style={{  fontWeight: "300" , maxWidth: isMobile ? '300px' : null }}>
           A través de nuestros años de experiencia hemos perfeccionado cada
           servicio.
         </span>
 
-        <div
+        <div className="conteiner"
           style={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: isMobile ?  'column' : "row",
             justifyContent: "space-between",
-            gap: "17rem",
-            marginTop: "10rem",
+
+          
           }}
         >
           <div

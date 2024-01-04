@@ -1,23 +1,25 @@
 import Navbar from "../Navbar";
+import { isMobile } from "react-device-detect";
 import Home2 from "./Home2";
 import construccion from "../../assets/Home/homeConstruccion.png";
 import Home3 from "./Home3";
 import rectangulo from "../../assets/Home/rectangulo.png";
 import Footer from "../Footer";
 import "./style.css";
+import HamburguesaMenu from "../Menu";
 
 function Home() {
   return (
     <>
       <header>
-        <Navbar></Navbar>
+       {isMobile ? (<HamburguesaMenu></HamburguesaMenu>) : (<Navbar></Navbar>)} 
       </header>
       <main>
         <section>
           <div
             style={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: isMobile ? 'column' :  "row",
               gap: '1rem',
               marginBottom: '2rem'
             }}
@@ -44,7 +46,7 @@ function Home() {
                 OPERACIONES DE COMERCIO <br />
                 EXTERIOR.
               </span>
-              <span className="texto2" style={{ lineHeight: "25px" }}>
+              <span className="texto2" style={{ lineHeight: "25px" , maxWidth: isMobile ? '300px' : null}}>
                 En MD Global Trade Services somos un equipo de trabajo que{" "}
                 <br />
                 encuentra soluciones aduaneras para su cadena logística.
@@ -52,8 +54,8 @@ function Home() {
               <div
                 style={{
                   display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
+                  flexDirection: isMobile ? 'column' :  "row",
+                  alignItems: isMobile ? 'left' : "center",
 
                   marginTop: "1rem",
                   justifyContent: "left",
@@ -92,7 +94,8 @@ function Home() {
               </div>
             </div>
             <div style={{ marginTop: "5rem", marginRight: "5%" }}>
-              <img className="fotohome1" src={construccion} alt="" />
+              <img className="fotohome1" src={construccion} alt="" style={{height: isMobile ? '300px' : null ,
+            width: isMobile ? '350px' : null }}/>
             </div>
           </div>
         </section>
@@ -101,7 +104,7 @@ function Home() {
             backgroundImage: `url(${rectangulo})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: "992px",
+            height: isMobile ? '1500px' : "835px",
             width: "auto",
           }}
         >

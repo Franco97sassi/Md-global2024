@@ -41,7 +41,7 @@ function Servicios() {
        {isMobile ? (<HamburguesaMenu></HamburguesaMenu>) : (<Navbar></Navbar>)} 
       </header>
       <main>
-        <div className="carousel-container" style={{ marginTop: '10%', marginBottom: '5%' , marginLeft: isMobile ? '3rem' : ''}}>
+        <div className="carousel-container" style={{ marginTop: '10%', marginBottom: '5%' , display: 'flex' , justifyContent: 'center'}}>
           <div className="carousel" >
             <div className="slide-container" style={{ display: 'flex', flexDirection: 'row'  , alignContent: 'center' , justifyContent: 'center'}}>
               <button className='flechitaLeft' style={{border: '0px' ,margin: '20px' , height: 'fit-content' , alignSelf: 'center'}} onClick={prevSlide}>

@@ -15,6 +15,7 @@
 
   .hamburguesa-menu {
     position: relative;
+    margin: 1rem;
   }
   
   .hamburguesa-icon {

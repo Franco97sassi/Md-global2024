@@ -21,7 +21,9 @@ function Home() {
               display: "flex",
               flexDirection: isMobile ? 'column' :  "row",
               gap: '1rem',
-              marginBottom: '2rem'
+              marginBottom: '2rem',
+              alignItems: isMobile ? 'center' : null
+          
             }}
           >
             <div className="texto"
@@ -29,7 +31,7 @@ function Home() {
                 textAlign: "Left",
                 display: "flex",
                 flexDirection: "column",
-                marginTop: "18rem",
+                marginTop: isMobile ? '1rem' : "18rem",
                 marginLeft: "5%",
                 color: "#8F0D3C",
               }}

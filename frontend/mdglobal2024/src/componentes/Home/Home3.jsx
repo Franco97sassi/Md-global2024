@@ -37,6 +37,7 @@ function Home3() {
           flexDirection: "column",
           alignItems: "center",
           color: "white",
+          
         }}
       >
         <span className="textoHOME3"

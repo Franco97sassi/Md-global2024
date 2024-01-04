@@ -1,3 +1,7 @@
+
+
+
+
 @media (max-width: 1920px) {
   .carousel {
     width: 1600px;
@@ -20,7 +24,7 @@
 
 @media (max-width: 1360px) {
   .carousel {
-    width: 800px;
+    width: 1100px;
     height: 447px;
   }
   .fotito {
@@ -38,4 +42,24 @@
   }
 
 
+}
+
+@media (max-width: 765px) {
+  .carousel {
+    width: 400px;
+    height: 600px;
+  }
+  .fotito {
+    width: 250px;
+    height: 250px;
+  }
+  .texto1 {
+    font-size: 15px;
+  }
+  .texto2 {font-size: 15px;}
+  .auditoria{
+    width: 100px;
+     height: 198px
+
+  }
 }

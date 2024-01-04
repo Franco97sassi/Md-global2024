@@ -10,6 +10,8 @@ import Atencion from './Atencion';
 import Despacho from './Despacho';
 import Auditoria from './Auditoria';
 import flechita from '../../assets/servicios/flechita.png';
+import { isMobile } from 'react-device-detect';
+import HamburguesaMenu from '../Menu';
 
 function Servicios() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -36,20 +38,20 @@ function Servicios() {
   return (
     <>
       <header>
-        <Navbar></Navbar>
+       {isMobile ? (<HamburguesaMenu></HamburguesaMenu>) : (<Navbar></Navbar>)} 
       </header>
       <main>
-        <div className="carousel-container" style={{ marginTop: '10%', marginBottom: '5%', marginLeft: '5%' }}>
-          <div className="carousel">
+        <div className="carousel-container" style={{ marginTop: '10%', marginBottom: '5%' , marginLeft: isMobile ? '3rem' : ''}}>
+          <div className="carousel" >
             <div className="slide-container" style={{ display: 'flex', flexDirection: 'row'  , alignContent: 'center' , justifyContent: 'center'}}>
               <button className='flechitaLeft' style={{border: '0px' ,margin: '20px' , height: 'fit-content' , alignSelf: 'center'}} onClick={prevSlide}>
-                <img src={flechita} alt="Previous" />
+                <img  style={{height: isMobile ?  '35px' : ''}} src={flechita} alt="Previous" />
               </button>
 
               {slides[currentSlide]}
 
               <button className='flechitaRight' style={{border: '0px' , margin: '20px', transform: 'rotate(180deg)' , alignSelf: 'center', height: 'fit-content'}} onClick={nextSlide}>
-                <img src={flechita} alt="Next" />
+                <img style={{height: isMobile ?  '35px' : ''}} src={flechita} alt="Next" />
               </button>
             </div>
           </div>

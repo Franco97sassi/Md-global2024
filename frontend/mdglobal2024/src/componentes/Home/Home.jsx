@@ -9,17 +9,12 @@ import "./styles.css";
 import HamburguesaMenu from "../Menu";
 import LogoAnimation from "./LogoAnimation";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
-
-
-
   return (
     <>
-   
-      <header>
-       { (isMobile ? (<HamburguesaMenu />) : (<Navbar />))}
-      </header>
+      <header>{isMobile ? <HamburguesaMenu /> : <Navbar />}</header>
 
       <main>
         <LogoAnimation></LogoAnimation>
@@ -27,28 +22,28 @@ function Home() {
           <div
             style={{
               display: "flex",
-              flexDirection: isMobile ? 'column' :  "row",
-              gap: '1rem',
-              marginBottom: '2rem',
-              alignItems: isMobile ? 'center' : 'center'
-          
+              flexDirection: isMobile ? "column" : "row",
+              gap: "1rem",
+              marginBottom: "2rem",
+              alignItems: isMobile ? "center" : "center",
             }}
           >
-            <div className="texto"
+            <div
+              className="texto"
               style={{
                 textAlign: "Left",
                 display: "flex",
                 flexDirection: "column",
-                marginTop: isMobile ? '1rem' : "18rem",
+                marginTop: isMobile ? "1rem" : "18rem",
                 marginLeft: "5%",
                 color: "#8F0D3C",
               }}
             >
-              <span className="textoo1"
+              <span
+                className="textoo1"
                 style={{
-
                   fontWeight: "bold",
-                  
+
                   marginBottom: "1rem",
                 }}
               >
@@ -56,7 +51,13 @@ function Home() {
                 OPERACIONES DE COMERCIO <br />
                 EXTERIOR.
               </span>
-              <span className="textoo2" style={{ lineHeight: "25px" , maxWidth: isMobile ? '300px' : null}}>
+              <span
+                className="textoo2"
+                style={{
+                  lineHeight: "25px",
+                  maxWidth: isMobile ? "300px" : null,
+                }}
+              >
                 En MD Global Trade Services somos un equipo de trabajo que{" "}
                 <br />
                 encuentra soluciones aduaneras para su cadena logística.
@@ -64,12 +65,12 @@ function Home() {
               <div
                 style={{
                   display: "flex",
-                  flexDirection: isMobile ? 'column' :  "row",
-                  alignItems: isMobile ? 'left' : "center",
-                  alignSelf: 'center' ,
+                  flexDirection: isMobile ? "column" : "row",
+                  alignItems: isMobile ? "left" : "center",
+                  alignSelf: "center",
                   marginTop: "1rem",
                   justifyContent: "left",
-                  gap: '1rem'
+                  gap: "1rem",
                 }}
               >
                 <button
@@ -88,25 +89,40 @@ function Home() {
                 >
                   Cotizar ahora
                 </button>
-                <button
-                  className="botonHome2"
-                  style={{
-                    paddingLeft: "2.5rem",
-                    paddingRight: "2.5rem",
-                    borderRadius: "1.5rem",
-                    border: "2px solid #8F0D3C",
-                    width: "240px",
-                    height: "43px",
-                    fontSize: "20px",
-                  }}
-                >
-                  Más servicios
-                </button>
+                <Link to={('/servicios')}>
+                  {" "}
+                  <button
+                    className="botonHome2"
+                    style={{
+                      paddingLeft: "2.5rem",
+                      paddingRight: "2.5rem",
+                      borderRadius: "1.5rem",
+                      border: "2px solid #8F0D3C",
+                      width: "240px",
+                      height: "43px",
+                      fontSize: "20px",
+                    }}
+                  >
+                    Más servicios
+                  </button>
+                </Link>
               </div>
             </div>
-            <div style={{ marginTop: isMobile ? '0.5rem' : "5rem", marginRight: "5%" }}>
-              <img className="fotohome1" src={construccion} alt="" style={{height: isMobile ? '300px' : null ,
-            width: isMobile ? '350px' : null }}/>
+            <div
+              style={{
+                marginTop: isMobile ? "0.5rem" : "5rem",
+                marginRight: "5%",
+              }}
+            >
+              <img
+                className="fotohome1"
+                src={construccion}
+                alt=""
+                style={{
+                  height: isMobile ? "300px" : null,
+                  width: isMobile ? "350px" : null,
+                }}
+              />
             </div>
           </div>
         </section>
@@ -115,7 +131,7 @@ function Home() {
             backgroundImage: `url(${rectangulo})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: isMobile ? '1500px' : "835px",
+            height: isMobile ? "1500px" : "835px",
             width: "100vw",
           }}
         >

@@ -50,6 +50,7 @@ function Servicios() {
           style={{
             marginTop: "10%",
             marginBottom: "10%",
+
             display: "flex",
             justifyContent: "center",
           }}

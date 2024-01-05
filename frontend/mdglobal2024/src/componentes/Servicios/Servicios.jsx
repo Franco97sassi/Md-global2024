@@ -49,7 +49,7 @@ function Servicios() {
           className="carousel-container"
           style={{
             marginTop: "10%",
-            marginBottom: "5%",
+            marginBottom: "10%",
             display: "flex",
             justifyContent: "center",
           }}

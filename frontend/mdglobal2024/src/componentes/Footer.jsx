@@ -11,7 +11,7 @@ function Footer() {
       style={{
         background: "linear-gradient(180deg, #8F96A4 0%, #323740 100%)",
   
-        width: '100vw',
+        width: '100%',
         display: "flex",
         flexDirection: "row",
         alignItems: 'center',

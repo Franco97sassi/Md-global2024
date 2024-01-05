@@ -47,7 +47,7 @@
 @media (max-width: 765px) {
   .carousel {
     width: 400px;
-    height: 600px;
+    height: auto;
   }
   .fotito {
     width: 250px;

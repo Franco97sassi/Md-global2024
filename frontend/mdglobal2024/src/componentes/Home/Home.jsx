@@ -7,14 +7,22 @@ import rectangulo from "../../assets/Home/rectangulo.png";
 import Footer from "../Footer";
 import "./styles.css";
 import HamburguesaMenu from "../Menu";
+import LogoAnimation from "./LogoAnimation";
+import { useState } from "react";
 
 function Home() {
+
+
+
   return (
     <>
+   
       <header>
-       {isMobile ? (<HamburguesaMenu></HamburguesaMenu>) : (<Navbar></Navbar>)} 
+       { (isMobile ? (<HamburguesaMenu />) : (<Navbar />))}
       </header>
+
       <main>
+        <LogoAnimation></LogoAnimation>
         <section>
           <div
             style={{

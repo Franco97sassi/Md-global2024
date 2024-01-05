@@ -1,0 +1,71 @@
+.logo-animation-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* o la altura deseada */
+    background-color: white;
+    opacity: 0; /* Cambiado a 0 para comenzar con opacidad cero */
+    transition: height 0.5s ease-out, opacity 1s ease-out;
+  }
+  
+  .logo {
+    max-width: 100%;
+    max-height: 100%;
+
+    animation: scaleLogo 1s ease-out, rotateLogo 2s linear, fadeInLogo 1s ease-out; /* Agregamos fadeInLogo aquí */
+  }
+  
+  .textoLogo {
+    opacity: 0; /* Comenzamos con opacidad cero */
+    animation: fadeInText 1s ease-out 1s forwards; /* Agregamos forwards para mantener el estado final de la animación */
+  }
+  
+  .hide {
+    height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: height 1s ease-out, opacity 0.5s ease-out; /* Agregamos la transición aquí */
+  }
+  
+  .show {
+    height: 100vh; /* o la altura deseada */
+    opacity: 1;
+  }
+  
+  @keyframes scaleLogo {
+    from {
+      transform: scale(0);
+    }
+    to {
+      transform: scale(1);
+    }
+  }
+  
+  @keyframes rotateLogo {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
+  @keyframes fadeInLogo {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeInText {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  

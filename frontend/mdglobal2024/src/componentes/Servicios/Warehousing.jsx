@@ -4,7 +4,7 @@ import './style.css'
 
 function Warehousing() {
   return (
-    <div className="carousel"
+    <div className={`carousel fade-in`}
       style={{
 
         borderRadius: '3rem',

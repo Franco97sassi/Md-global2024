@@ -3,7 +3,7 @@ import './style.css'
 import { isMobile } from "react-device-detect";
 function Auditoria() {
   return (
-    <div className="carousel"
+    <div className={`carousel fade-in`}
       style={{
 
         borderRadius: '3rem',

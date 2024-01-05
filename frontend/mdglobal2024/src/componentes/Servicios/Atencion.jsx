@@ -3,7 +3,7 @@ import { isMobile } from "react-device-detect";
 import './style.css'
 function Atencion() {
   return (
-    <div className="carousel"
+    <div className={`carousel fade-in`}
       style={{
 
         borderRadius: '3rem',

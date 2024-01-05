@@ -3,7 +3,7 @@ import arancelaria from "../../assets/servicios/arancelaria.png";
 
 function Arancelaria() {
   return (
-    <div className="carousel"
+    <div className={`carousel fade-in`}
       style={{
 
         borderRadius: '3rem',

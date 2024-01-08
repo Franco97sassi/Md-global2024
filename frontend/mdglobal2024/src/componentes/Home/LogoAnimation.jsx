@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './LogoAnimation.css';
+import './logoAnimation.css'
 import logo from '../../assets/Home/logoInicio.png'
 import { isMobile } from 'react-device-detect';
 

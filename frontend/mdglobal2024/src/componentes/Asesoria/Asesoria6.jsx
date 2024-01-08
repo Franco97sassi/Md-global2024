@@ -68,11 +68,19 @@ const AsesoriaSex = () => {
         > 
           
            
+<<<<<<< HEAD
+          <Typography style={{ fontSize: '3em' ,fontWeight:600,paddingTop:"219px"}}   className={classes.centeredText} >
+          PERSONALIZAR COTIZACIÓN
+
+        </Typography>
+        <Typography style={{ fontSize: '1.875em',paddingBottom:"63px"  }} className={classes.centeredText}>
+=======
           <Typography style={{ fontSize: '48px' ,fontWeight:600,paddingTop:"219px"}}   className={classes.centeredText} >
           PERSONALIZAR COTIZACIÓN
 
         </Typography>
         <Typography style={{ fontSize: '30px',paddingBottom:"63px"  }} className={classes.centeredText}>
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
         Con los siguientes datos podremos brindarte una mejor cotización de tu interés        
         </Typography>
           <Box sx={{ width: '100%' }}>

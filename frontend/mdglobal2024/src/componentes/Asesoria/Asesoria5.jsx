@@ -75,7 +75,11 @@ const AsesoriaQuin = () => {
     <div>
       <Navbar />
       <Box  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>   
+<<<<<<< HEAD
+      <Typography  style={{fontSize: '3em' ,fontWeight:600,paddingTop:"219px"}}className={classes.centeredText}  >
+=======
       <Typography  style={{fontSize: '48px' ,fontWeight:600,paddingTop:"219px"}}className={classes.centeredText}  >
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
           Costos
         </Typography>
         <Typography style={{ fontSize: '30px',paddingBottom:"27px",color:"rgba(143, 150, 164, 1)" }}  >

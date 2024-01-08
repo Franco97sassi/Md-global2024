@@ -18,8 +18,13 @@ const Aduanas = () => {
   };
 
   const mapIframeStyle = {
+<<<<<<< HEAD
+    width: '76.0625em',
+    height: '37.875em',
+=======
     width: '1217px',
     height: '606px',
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
     borderRadius: '40px',
   };
 
@@ -45,16 +50,27 @@ const Aduanas = () => {
     <div>
        <header>{isMobile ? <HamburguesaMenu /> : <Navbar />}</header>
 <Box style={{paddingTop:"219px",textAlign:"center"}}>  
+<<<<<<< HEAD
+        <Typography style={{  fontSize: '3em' ,fontWeight:600, color: "#8F0D3C" }}>
+        ADUANAS
+        </Typography>
+        <Typography style={{   fontSize:"1.875em", color: "rgba(143, 150, 164, 1)", marginBottom:"23px"
+=======
         <Typography style={{  fontSize: '48px' ,fontWeight:600, color: "#8F0D3C" }}>
         ADUANAS
         </Typography>
         <Typography style={{   fontSize:"30px", color: "rgba(143, 150, 164, 1)", marginBottom:"23px"
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
 }}>
         Con nuestras asesorías puedes aclarar tus ideas para tus proyectos de importación
         </Typography></Box>
         <Box
         style={{
+<<<<<<< HEAD
+          maxWidth: '25em', // Cambia el valor según tus necesidades
+=======
           maxWidth: '400px', // Cambia el valor según tus necesidades
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
           margin: '0 auto',  // Para centrar el menú horizontalmente
         }}
       >
@@ -67,9 +83,15 @@ const Aduanas = () => {
 </TabList>
         </Box>
         <Box style={{display:"flex",flexDirection:"row",justifyContent:"center" }}>  
+<<<<<<< HEAD
+        <TabPanel value="1"> <iframe src="https://www.google.com/maps/d/embed?mid=1jiu6HtrEZ4Wrl_rnYlpc9iUiFGkZHqc&ehbc=2E312F" style={mapIframeStyle} width="40em" height="30em"></iframe></TabPanel>
+        <TabPanel value="2"><iframe src="https://www.google.com/maps/d/embed?mid=1IOKxKqIpCkIWYed6H1f-oK80DadUYEA&ehbc=2E312F" style={mapIframeStyle} width="40em" height="30em"></iframe></TabPanel>
+        <TabPanel value="3"><iframe src="https://www.google.com/maps/d/embed?mid=1zhULW3mzp2nMTOJyUJ-yNZdxc5CXRJ4&ehbc=2E312F" style={mapIframeStyle} width="40em" height="30em"></iframe></TabPanel>
+=======
         <TabPanel value="1"> <iframe src="https://www.google.com/maps/d/embed?mid=1jiu6HtrEZ4Wrl_rnYlpc9iUiFGkZHqc&ehbc=2E312F" style={mapIframeStyle} width="640" height="480"></iframe></TabPanel>
         <TabPanel value="2"><iframe src="https://www.google.com/maps/d/embed?mid=1IOKxKqIpCkIWYed6H1f-oK80DadUYEA&ehbc=2E312F" style={mapIframeStyle} width="640" height="480"></iframe></TabPanel>
         <TabPanel value="3"><iframe src="https://www.google.com/maps/d/embed?mid=1zhULW3mzp2nMTOJyUJ-yNZdxc5CXRJ4&ehbc=2E312F" style={mapIframeStyle} width="640" height="480"></iframe></TabPanel>
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
         </Box>
          </TabContext>
     </Box>

@@ -23,10 +23,17 @@ const AsesoriaPrim = () => {
   return (
     <div>
       <Navbar> </Navbar>
+<<<<<<< HEAD
+      <Typography style={{ fontSize: '3em', fontWeight: 600, paddingTop: "219px" }} className={classes.centeredText} >
+        ASESORÍA
+      </Typography>
+      <Typography style={{ fontSize: '1.875em',paddingBottom:"63px" }} className={classes.centeredText}>
+=======
       <Typography style={{ fontSize: '48px', fontWeight: 600, paddingTop: "219px" }} className={classes.centeredText} >
         ASESORÍA
       </Typography>
       <Typography style={{ fontSize: '30px',paddingBottom:"63px" }} className={classes.centeredText}>
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
         Con nuestras asesorías puedes aclarar tus ideas para tus proyectos de importación
       </Typography>
       <Box style={{ display: 'flex',
@@ -35,8 +42,13 @@ const AsesoriaPrim = () => {
        justifyContent: 'center',gap:"103px", width: '100%' }}>
 
         <Box style={{
+<<<<<<< HEAD
+          width: '37.9375em',
+          height: '23.875em',
+=======
           width: '607px',
           height: '382px',
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
           boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
           display: 'flex', flexDirection: 'column',
           justifyContent: 'center', background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
@@ -49,8 +61,13 @@ const AsesoriaPrim = () => {
           </Typography>
         </Box>
         <Box style={{
+<<<<<<< HEAD
+           width: '37.9375em',
+           height: '23.875em',
+=======
           width: '607px',
           height: '382px',
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
           boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
           display: 'flex', flexDirection: 'column',
           justifyContent: 'center', background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
@@ -62,12 +79,20 @@ const AsesoriaPrim = () => {
         </Box>
       </Box>
       <div>
+<<<<<<< HEAD
+        <Typography style={{paddingTop:"59px", fontSize: '1.875em', textAlign: "center", color: "rgba(123, 123, 123, 1)" }}  >
+=======
         <Typography style={{paddingTop:"59px", fontSize: '30px', textAlign: "center", color: "rgba(123, 123, 123, 1)" }}  >
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
           Ten en consideración los siguientes puntos:
         </Typography>
       </div>
       <div style={{
+<<<<<<< HEAD
+        fontSize: '1.25em', display: 'flex', justifyContent: 'center',paddingBottom:"93px"
+=======
         fontSize: '20px', display: 'flex', justifyContent: 'center',paddingBottom:"93px"
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
       }} >
         <ul  >
 

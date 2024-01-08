@@ -23,10 +23,17 @@ const AsesoriaSeg = () => {
   return (
     <div> 
       <Navbar> </Navbar>
+<<<<<<< HEAD
+        <Typography style={{ fontSize: '3em' ,fontWeight:600,paddingTop:"219px"}}   className={classes.centeredText} >
+        COTIZAR
+        </Typography>
+        <Typography style={{ fontSize: '1.875em',paddingBottom:"63px"  }} className={classes.centeredText}>
+=======
         <Typography style={{ fontSize: '48px' ,fontWeight:600,paddingTop:"219px"}}   className={classes.centeredText} >
         COTIZAR
         </Typography>
         <Typography style={{ fontSize: '30px',paddingBottom:"63px"  }} className={classes.centeredText}>
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
         Con nuestras asesorías puedes aclarar tus ideas para tus proyectos de importación
         </Typography>
         <Box style={{ display: 'flex', 
@@ -34,8 +41,13 @@ const AsesoriaSeg = () => {
 
         justifyContent: 'center',gap:"103px", width: '100%' }}>
          
+<<<<<<< HEAD
+        <Box style={{ width: '37.9375em',
+          height: '23.875em',borderRadius:"40px",
+=======
         <Box style={{width: '607px',
     height: '382px',borderRadius:"40px",
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
     boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
     display: 'flex',flexDirection: 'column',
     justifyContent: 'center',alignItems: 'center',
@@ -50,8 +62,13 @@ const AsesoriaSeg = () => {
     </Typography>
     </Link> </Box> 
             
+<<<<<<< HEAD
+        <Box style={{ width: '37.9375em',
+          height: '23.875em',borderRadius:"40px",
+=======
         <Box style={{width: '607px',
     height: '382px',borderRadius:"40px",
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
     boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
     display: 'flex',flexDirection: 'column',
     justifyContent: 'center', background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
@@ -62,11 +79,19 @@ const AsesoriaSeg = () => {
     </Link></Box> 
     </Box>
 <div>
+<<<<<<< HEAD
+      <Typography  style={{paddingTop:"59px", fontSize: '1.875em',textAlign:"center",color:"rgba(123, 123, 123, 1)" }}  >
+      Ten en consideración los siguientes puntos:
+      </Typography>
+       </div>
+      <div style={{ fontSize: '1.25em',display: 'flex', justifyContent: 'center',paddingBottom:"93px"
+=======
       <Typography  style={{paddingTop:"59px", fontSize: '30px',textAlign:"center",color:"rgba(123, 123, 123, 1)" }}  >
       Ten en consideración los siguientes puntos:
       </Typography>
        </div>
       <div style={{ fontSize: '20px',display: 'flex', justifyContent: 'center',paddingBottom:"93px"
+>>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
        }} >
               <ul  >
 

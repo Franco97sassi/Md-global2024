@@ -21,9 +21,9 @@ const HamburguesaMenu = () => {
           <Link className='seccion' to={'/home'}>Home</Link> 
           <p> <Link className='seccion' to={'/servicios'}>Servicios</Link> </p>
          
-          <p><Link className='seccion' to={'/servicios'}>Cotizar</Link></p>
-          <p><Link className='seccion' to={'/servicios'}>Aduanas</Link></p>
-          <p><Link  className='seccion' to={'/servicios'}>Nosotros</Link></p>
+          <p><Link className='seccion' to={'/cotizar'}>Cotizar</Link></p>
+          <p><Link className='seccion' to={'/aduanas'}>Aduanas</Link></p>
+          <p><Link  className='seccion' to={'/nosotros'}>Nosotros</Link></p>
         </div>
       )}
     </div>

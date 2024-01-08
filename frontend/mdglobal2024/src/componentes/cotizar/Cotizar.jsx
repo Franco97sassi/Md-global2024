@@ -1,11 +1,12 @@
 import Footer from "../Footer";
+import { isMobile } from "react-device-detect";
 import Navbar from "../Navbar";
 import peso from "../../assets/cotizar/peso.png"
-
+import HamburguesaMenu from "../Menu";
 import plataformas from "../../assets/cotizar/plataformas.png"
 function cotizar() {
     return (<>
-            <header><Navbar></Navbar></header>
+      <header>{isMobile ? <HamburguesaMenu /> : <Navbar />}</header>
             <main>
                 <div>
                     <span>COTIZACIÓN DE NUESTROS SERVICIOS</span>

@@ -9,21 +9,23 @@ import HamburguesaMenu from '../Menu';
 
 const useStyles = makeStyles({
   customTextField: {
-    backgroundColor: 'rgba(240, 240, 240, 1)', // Estilo para el fondo del TextField
-    borderRadius: '40px', // Aplicar borderRadius al TextField
+    backgroundColor: 'rgba(240, 240, 240, 1)',
+    borderRadius: '40px',
     '& .MuiInputBase-input': {
-      paddingTop: '15px', // Aumentar el relleno superior para mover el placeholder hacia abajo
-      fontSize: '25px', // Tamaño de la fuente del placeholder
-      color: 'rgba(143, 13, 60, 1)', // Color del texto del placeholder
+      paddingTop: '15px',
+      fontSize: '25px',
+      color: 'rgba(143, 13, 60, 1)',
+     
     },
     '& .MuiOutlinedInput-root': {
-      borderRadius: '40px', // Asegurar que el borde exterior también tenga borderRadius
-      borderColor: 'rgba(240, 240, 240, 1)', // Hacer que el borde sea del mismo color que el fondo
+      borderRadius: '40px',
+      borderColor: 'rgba(240, 240, 240, 1)',
     },
   },
   customGridItem: {
-    maxWidth: '640px', // Establecer el ancho máximo de cada Grid item
-    flexBasis: '640px', // Establecer el ancho base de cada Grid item
+    maxWidth: '100%', // Asegúrate de que el Grid item no exceda el ancho de la pantalla
+    flexBasis: 'auto', // Permite que el tamaño se ajuste automáticamente
+    
   },
   centeredText: {
     textAlign: 'center',
@@ -77,9 +79,9 @@ const AsesoriaSex = () => {
         <Typography style={{ fontSize: '1.875em',paddingBottom:"63px"  }} className={classes.centeredText}>
         Con los siguientes datos podremos brindarte una mejor cotización de tu interés        
         </Typography>
-          <Box sx={{ width: '100%' }}>
+          <Box >
           <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-          <Grid item xs={12} md={6} >
+          <Grid item xs={12} md={6}  >
           <Item>  <TextField
             fullWidth
             rows={1}

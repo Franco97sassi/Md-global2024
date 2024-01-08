@@ -11,11 +11,12 @@ const AsesoriaSep = () => {
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
        <header>{isNonMobileScreens ? <Navbar /> : <HamburguesaMenu />}</header>
       <Box style={{
-        // flexGrow: 1,
+        flexGrow: 1,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        alignContent:"center"
       }}>
         <Typography style={{ fontWeight: 600, fontSize: '3em', color: 'rgba(143, 13, 60, 1)' }}>
           ¡Gracias por contactarnos!

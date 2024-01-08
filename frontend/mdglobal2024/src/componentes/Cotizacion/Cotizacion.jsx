@@ -25,17 +25,10 @@ const Cotizacion = () => {
   return (
     <div>
          <header>{isMobile ? <HamburguesaMenu /> : <Navbar />}</header>
-<<<<<<< HEAD
       <Typography style={{ fontSize: '3em', fontWeight: 600, paddingTop: "219px" }} className={classes.centeredText} >
         COTIZACIÓN DE NUESTROS SERVICIOS
       </Typography>
       <Typography style={{ fontSize: '1,875em' }} className={classes.centeredText}>
-=======
-      <Typography style={{ fontSize: '48px', fontWeight: 600, paddingTop: "219px" }} className={classes.centeredText} >
-        COTIZACIÓN DE NUESTROS SERVICIOS
-      </Typography>
-      <Typography style={{ fontSize: '30px' }} className={classes.centeredText}>
->>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
         Selecciona una de las siguientes opciones
       </Typography>
       <Box style={{ display: 'flex',
@@ -55,20 +48,12 @@ const Cotizacion = () => {
         </Link></Box>
          </Box>
       <div>
-<<<<<<< HEAD
         <Typography style={{ fontSize: '1.875em', textAlign: "center", color: "rgba(123, 123, 123, 1)" }}  >
-=======
-        <Typography style={{ fontSize: '30px', textAlign: "center", color: "rgba(123, 123, 123, 1)" }}  >
->>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
           Ten en consideración los siguientes puntos:
         </Typography>
       </div>
       <div style={{
-<<<<<<< HEAD
         fontSize: '1.25em', display: 'flex', justifyContent: 'center',paddingBottom:"93px"
-=======
-        fontSize: '20px', display: 'flex', justifyContent: 'center',paddingBottom:"93px"
->>>>>>> 08263c0f52f2f82bf25ac208c7a66732275caacb
       }} >
         <ul  >
 

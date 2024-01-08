@@ -78,7 +78,7 @@ const AsesoriaQuin = () => {
        <Typography  style={{fontSize: '3em' ,fontWeight:600,paddingTop:"219px"}}className={classes.centeredText}  >
             Costos
         </Typography>
-        <Typography style={{ fontSize: '30px',paddingBottom:"27px",color:"rgba(143, 150, 164, 1)" }}  >
+        <Typography style={{ fontSize: '1.875em',paddingBottom:"27px",color:"rgba(143, 150, 164, 1)" }}  >
           En este apartado se desglosarán los costos de importación por las diferentes vías
         </Typography>
          <TabContext value={value}  >

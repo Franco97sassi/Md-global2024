@@ -64,9 +64,9 @@ const AsesoriaSex = () => {
       <Box style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>   
         <Box
           component="form"
-          sx={{
-            '& > :not(style)': { m: 5, width: '25ch' },
-          }}
+          // sx={{
+          //   '& > :not(style)': { m: 5, width: '25ch' },
+          // }}
           noValidate
           autoComplete="off"
         > 
@@ -80,7 +80,7 @@ const AsesoriaSex = () => {
         Con los siguientes datos podremos brindarte una mejor cotización de tu interés        
         </Typography>
           <Box >
-          {/* <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+          <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={12} md={6}  >
           <Item>  <TextField
             fullWidth
@@ -168,7 +168,7 @@ const AsesoriaSex = () => {
             
           /></Item>
         </Grid>
-        </Grid> */}
+        </Grid>  
     </Box>
           
           

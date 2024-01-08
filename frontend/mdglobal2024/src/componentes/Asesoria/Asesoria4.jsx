@@ -8,6 +8,7 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
+import HamburguesaMenu from '../Menu'
 
 const useStyles = makeStyles({
   centeredText: {
@@ -24,7 +25,7 @@ const AsesoriaCuar = () => {
   const classes = useStyles();
   return (
     <div> 
-      <Navbar> </Navbar>
+       <header>{isNonMobileScreens ? <Navbar /> : <HamburguesaMenu />}</header>
         <Typography style={{ fontSize: '3em' ,fontWeight:600,paddingTop:"219px"}}   className={classes.centeredText} >
         ASESORÍA
         </Typography>
@@ -33,35 +34,49 @@ const AsesoriaCuar = () => {
         </Typography>
         <Box style={{ display: 'flex',flexDirection:isNonMobileScreens?"row":"column", justifyContent: 'center', width: '100%',gap:"65px" }}>
         <Link to="/asesoriaQuin"> 
-        <Box style={{width: '27.635em',
-    height: '23.875em',                          
-
-    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
-    display: 'flex',flexDirection: 'column',
-    justifyContent: 'center', background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
-    alignItems: 'center'}} > 
+        <Box style={{
+  width: isNonMobileScreens ? '27.635em' : '90%', // Ancho más pequeño en móviles
+  height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
+  borderRadius:"40px",
+  boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
+  display: 'flex', flexDirection: 'column',
+  justifyContent: 'center',
+  background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
+  alignItems: 'center',
+  margin: '10px auto' // Margen para centrar en móviles
+}}>
         <img src={asesoria1} alt="" />
          
         <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px" }}>
     Maritimo
     </Typography>
           </Box></Link>  
-       <Link to="/asesoriaQuin">  <Box style={{width: '27.635em',
-    height: '23.875em',
-    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
-    display: 'flex',flexDirection: 'column',
-    justifyContent: 'center', background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
-    alignItems: 'center'}} >   <img src={asesoria2} alt="" />
+       <Link to="/asesoriaQuin">  <Box style={{
+  width: isNonMobileScreens ? '27.635em' : '90%', // Ancho más pequeño en móviles
+  height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
+  borderRadius:"40px",
+  boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
+  display: 'flex', flexDirection: 'column',
+  justifyContent: 'center',
+  background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
+  alignItems: 'center',
+  margin: '10px auto' // Margen para centrar en móviles
+}}>   <img src={asesoria2} alt="" />
     <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px"  }}>
     Aéreo
     </Typography>
     </Box></Link>
-    <Link to="/asesoriaQuin">  <Box style={{width: '27.635em',
-    height: '23.875em',
-    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
-    display: 'flex',flexDirection: 'column',
-    justifyContent: 'center', background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
-    alignItems: 'center'}} >   <img src={asesoria3} alt="" />
+    <Link to="/asesoriaQuin">  <Box style={{
+  width: isNonMobileScreens ? '27.635em' : '90%', // Ancho más pequeño en móviles
+  height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
+  borderRadius:"40px",
+  boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
+  display: 'flex', flexDirection: 'column',
+  justifyContent: 'center',
+  background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
+  alignItems: 'center',
+  margin: '10px auto' // Margen para centrar en móviles
+}}>   <img src={asesoria3} alt="" />
     <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px"  }}>
     Terrestre
     </Typography>

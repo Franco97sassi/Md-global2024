@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Button, Typography } from '@material-ui/core';
+import { Box, Button, Typography, useMediaQuery } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
@@ -8,6 +8,7 @@ import TabContext from '@mui/lab/TabContext';
 import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { makeStyles } from '@material-ui/core/styles';
+import HamburguesaMenu from '../Menu';
 const useStyles = makeStyles((theme) => ({
   centeredText: {
     textAlign: 'center',
@@ -29,33 +30,35 @@ const useStyles = makeStyles((theme) => ({
     backgroundColor: '#D32F2F', // Color de fondo para la pestaña seleccionada
     color: '#FFFFFF', // Color de texto para la pestaña seleccionada
    },
-  itemBox: {
-    margin: '5px 0', // Añade un margen vertical de 10px y horizontal de 0
+   itemBox: {
+    margin: '5px 0',
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
     backgroundColor: "rgba(240, 240, 240, 1)",
-    width: "640px",
+    width: '100%', // Usar 100% para evitar desbordamiento
+    maxWidth: '640px', // Establecer un máximo para pantallas grandes
     height: "58px",
     borderRadius: "40px",
     padding: '0 20px',
   },
   mainContainer: {
-    background: 'linear-gradient(to bottom, #FFFFFF, #D3D3D3)', // Gradiente de blanco a gris
-    width: '1217px', // Ancho de 1217px
-    height: '664px', // Alto de 664px
-    padding: theme.spacing(2), // Espaciado interno
-    margin: 'auto', // Centra la caja
+    background: 'linear-gradient(to bottom, #FFFFFF, #D3D3D3)',
+    width: '100%', // Usar 100% para responsividad
+    maxWidth: '1217px', // Establecer un máximo para pantallas grandes
+    height: 'auto', // Altura automática para adaptarse al contenido
+    padding: theme.spacing(2),
+    margin: 'auto',
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    // Añade aquí otros estilos que necesites
   },
 }));
 const AsesoriaQuin = () => {
   const [value, setValue] = React.useState('1');
   const classes = useStyles();
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -73,7 +76,7 @@ const AsesoriaQuin = () => {
   
   return (
     <div>
-      <Navbar />
+       <header>{isNonMobileScreens ? <Navbar /> : <HamburguesaMenu />}</header>
       <Box  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>   
        <Typography  style={{fontSize: '3em' ,fontWeight:600,paddingTop:"219px"}}className={classes.centeredText}  >
             Costos
@@ -97,7 +100,7 @@ const AsesoriaQuin = () => {
         <Box style={{  
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',color:"rgba(143, 13, 60, 1)",
             fontWeight:700,
-              width: "1124px", height: "47px", borderRadius: "40px", padding: '0 20px'
+              width: isNonMobileScreens?"1124px":"90%", height: "47px", borderRadius: "40px", padding: '0 20px'
           }}>
            <Typography style={{fontWeight:700}}>Concepto</Typography>
            <Typography style={{fontWeight:700}}>Importación</Typography>
@@ -107,7 +110,7 @@ const AsesoriaQuin = () => {
            <Box className={classes.itemBox} style={{  
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',
             backgroundColor: "rgba(240, 240, 240, 1)",color:"rgba(143, 13, 60, 1)"
-            , width: "1124px", height: "47px", borderRadius: "40px", padding: '0 20px'
+            ,width: isNonMobileScreens?"1124px":"50%", height: "47px", borderRadius: "40px", padding: '0 20px'
           }}>
             <Typography>{item}</Typography>
             <Typography>{prices[index]}</Typography>
@@ -116,7 +119,7 @@ const AsesoriaQuin = () => {
         <Box style={{  
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',color:"rgba(143, 13, 60, 1)",
             fontWeight:700,
-             width: "1124px", height: "47px", borderRadius: "40px", padding: '0 20px'
+            width: isNonMobileScreens?"1124px":"50%",height: "47px", borderRadius: "40px", padding: '0 20px'
           }}>
             <Typography style={{fontWeight:700}}>Total</Typography>
             <Typography  style={{fontWeight:700}}>$11.450,00</Typography>

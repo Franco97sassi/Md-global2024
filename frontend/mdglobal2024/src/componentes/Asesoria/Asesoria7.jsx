@@ -1,19 +1,22 @@
 import React from 'react';
-import { Box, Typography } from '@material-ui/core';
+import { Box, Typography, useMediaQuery } from '@material-ui/core';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
+import HamburguesaMenu from '../Menu';
 
 const AsesoriaSep = () => {
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
+
   return (
     <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
-      <Navbar />
-      <Box style={{ 
-        flexGrow: 1,
+       <header>{isNonMobileScreens ? <Navbar /> : <HamburguesaMenu />}</header>
+      <Box style={{
+        // flexGrow: 1,
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'center' 
-      }}> 
+        alignItems: 'center'
+      }}>
         <Typography style={{ fontWeight: 600, fontSize: '3em', color: 'rgba(143, 13, 60, 1)' }}>
           ¡Gracias por contactarnos!
         </Typography>

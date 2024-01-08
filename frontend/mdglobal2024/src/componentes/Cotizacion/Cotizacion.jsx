@@ -39,12 +39,12 @@ const Cotizacion = () => {
           
 
 
-            <img src={cotizacionAsesoria} alt="" width="640px" height="415px" />
+            <img src={cotizacionAsesoria} alt="" width={isNonMobileScreens?'37.9375em' : '90%'} height={isNonMobileScreens?'23.875em' : 'auto'} />
 
           
         </Link></Box>
         <Box>  <Link to="/asesoriaSeg">
-          <img src={cotizacionCotizar} alt="" />
+          <img src={cotizacionCotizar} alt=""  width={isNonMobileScreens?'37.9375em' : '90%'} height={isNonMobileScreens?'23.875em' : 'auto'} />
         </Link></Box>
          </Box>
       <div>

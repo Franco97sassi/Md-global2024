@@ -1,10 +1,11 @@
 import React from 'react';
-import { Box, Button, Grid, TextField, Typography, makeStyles } from '@material-ui/core';
+import { Box, Button, Grid, TextField, Typography, makeStyles, useMediaQuery } from '@material-ui/core';
 import { Link } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import { styled } from '@mui/material/styles';
 import Paper from '@mui/material/Paper';
+import HamburguesaMenu from '../Menu';
 
 const useStyles = makeStyles({
   customTextField: {
@@ -53,10 +54,11 @@ const Item = styled(Paper)(({ theme }) => ({
 
 const AsesoriaSex = () => {
   const classes = useStyles();
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
   return (
     <div>
-      <Navbar />
+       <header>{isNonMobileScreens ? <Navbar /> : <HamburguesaMenu />}</header>
       <Box style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>   
         <Box
           component="form"

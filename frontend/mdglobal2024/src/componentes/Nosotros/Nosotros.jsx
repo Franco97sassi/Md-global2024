@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Button, Grid, Typography } from '@material-ui/core'
+import { Box, Button, Grid, Typography, useMediaQuery } from '@material-ui/core'
 import nosotros from "../../assets/Nosotros/nosotros.png";
 import Navbar from '../Navbar';
 import Footer from '../Footer';
@@ -21,7 +21,10 @@ const Item = styled(Paper)(({ theme }) => ({
   flexDirection: 'column', // Organiza los elementos en una columna
   justifyContent: 'center', // Centra verticalmente
 }));
+ 
 const Nosotros = () => {
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
+
   return (
     <div>
   <header>{isMobile ? <HamburguesaMenu /> : <Navbar />}</header>
@@ -44,10 +47,13 @@ const Nosotros = () => {
       </Stack> */}
       <Box sx={{ Width: '100%',paddingTop: "119px" }}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-        <Grid item xs={12} md={6}  style={{paddingTop:"119px"}}>
-        <img src={nosotros} alt="Nosotros" style={{ maxWidth: '100%', width: '100%', height: 'auto' }} />
-        </Grid>
-        <Grid item xs={12} md={6}  style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}> {/* Se agregó estilo Flexbox para centrar el contenido verticalmente */}
+      <Grid item xs={12} md={6} style={{ paddingTop: "119px", textAlign: isNonMobileScreens ? "left" : "center" }}>
+            <img src={nosotros} alt="Nosotros" style={{ maxWidth: '100%', width: '100%', height: 'auto' }} />
+          </Grid>
+        <Grid item xs={12} md={6}  style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' ,
+        textAlign:isNonMobileScreens?"left":"center"
+      
+      }}> {/* Se agregó estilo Flexbox para centrar el contenido verticalmente */}
         <Typography sx={{ paddingTop: "337px" }}  style={{ fontWeight:600,color:"#8F0D3C",fontSize:"3em"} } >
             Nosotros
           </Typography>

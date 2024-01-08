@@ -18,8 +18,8 @@ const Aduanas = () => {
   };
 
   const mapIframeStyle = {
-    width: '76.0625em',
-    height: '37.875em',
+    width: isMobile ? '90vw' : '76.0625em',  // Ancho relativo en móviles
+    height: isMobile ? 'auto' : '37.875em',  // Altura automática en móviles
     borderRadius: '40px',
   };
 
@@ -54,7 +54,7 @@ const Aduanas = () => {
         </Typography></Box>
         <Box
         style={{
-          maxWidth: '25em', // Cambia el valor según tus necesidades
+          maxWidth: isMobile ? '90%' : '25em', // Ancho máximo relativo en móviles
           margin: '0 auto',  // Para centrar el menú horizontalmente
         }}
       >

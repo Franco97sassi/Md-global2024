@@ -6,6 +6,7 @@ import Navbar from '../Navbar'
 import Footer from '../Footer'
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
+import HamburguesaMenu from '../Menu'
 
 const useStyles = makeStyles({
   centeredText: {
@@ -22,7 +23,7 @@ const AsesoriaPrim = () => {
   const classes = useStyles();
   return (
     <div>
-      <Navbar> </Navbar>
+       <header>{isNonMobileScreens ? <Navbar /> : <HamburguesaMenu />}</header>
       <Typography style={{ fontSize: '3em', fontWeight: 600, paddingTop: "219px" }} className={classes.centeredText} >
         ASESORÍA
       </Typography>
@@ -34,14 +35,18 @@ const AsesoriaPrim = () => {
 
        justifyContent: 'center',gap:"103px", width: '100%' }}>
 
-        <Box style={{
-          width: '37.9375em',
-          height: '23.875em',
-          boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
-          display: 'flex', flexDirection: 'column',
-          justifyContent: 'center', background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
-          alignItems: 'center',borderRadius:"40px"
-        }} >
+<Box style={{
+  width: isNonMobileScreens ? '37.9375em' : '90%', // Ancho relativo en móviles
+  height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
+  boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
+  display: 'flex', 
+  flexDirection: 'column',
+  justifyContent: 'center',
+  background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
+  alignItems: 'center',
+  borderRadius: "40px",
+  margin: isNonMobileScreens ? '0' : '10px auto', // Margen para centrar en móviles
+}}>
           <img src={asesoria1} alt="" />
 
           <Typography style={{ marginTop: '7px', color: "#8F0D3C", fontSize: "30px",paddingTop:"50px"}}>
@@ -49,13 +54,17 @@ const AsesoriaPrim = () => {
           </Typography>
         </Box>
         <Box style={{
-           width: '37.9375em',
-           height: '23.875em',
-          boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
-          display: 'flex', flexDirection: 'column',
-          justifyContent: 'center', background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
-          alignItems: 'center',borderRadius:"40px"
-        }} >   <img src={asesoria2} alt="" />
+  width: isNonMobileScreens ? '37.9375em' : '90%', // Ancho relativo en móviles
+  height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
+  boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
+  display: 'flex', 
+  flexDirection: 'column',
+  justifyContent: 'center',
+  background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
+  alignItems: 'center',
+  borderRadius: "40px",
+  margin: isNonMobileScreens ? '0' : '10px auto', // Margen para centrar en móviles
+}}>  <img src={asesoria2} alt="" />
           <Typography style={{ marginTop: '7px', color: "#8F0D3C", fontSize: "30px" }}>
             Quiero una Reunión
           </Typography>

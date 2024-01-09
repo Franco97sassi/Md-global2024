@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './logo.css'
 import logo from '../../assets/Home/logoInicio.png'
 import { isMobile } from 'react-device-detect';
+import './styles.css'
 
 
 const LogoAnimation = () => {

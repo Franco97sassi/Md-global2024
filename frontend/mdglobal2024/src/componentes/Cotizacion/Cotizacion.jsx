@@ -25,15 +25,15 @@ const Cotizacion = () => {
   return (
     <div>
          <header>{isMobile ? <HamburguesaMenu /> : <Navbar />}</header>
-      <Typography style={{ fontSize: '3em', fontWeight: 600, paddingTop: "219px" }} className={classes.centeredText} >
+      <Typography style={{ fontSize: isNonMobileScreens?'3em':"1.5em", fontWeight: 600, paddingTop:isNonMobileScreens? "219px":"25px" }} className={classes.centeredText} >
         COTIZACIÓN DE NUESTROS SERVICIOS
       </Typography>
-      <Typography style={{ fontSize: '1,875em' }} className={classes.centeredText}>
+      <Typography style={{ fontSize: isNonMobileScreens?'1.875em':"1em" }} className={classes.centeredText}>
         Selecciona una de las siguientes opciones
       </Typography>
       <Box style={{ display: 'flex',
       flexDirection:isNonMobileScreens?"row":"column",
-       justifyContent: 'center', width: '100%' ,gap:"103px",
+       justifyContent: 'center', width: '100%' ,gap:isNonMobileScreens?"103px":"0px",paddingBottom:"3.25em",
         }}>
         <Box>  
         <Link to="/asesoriaPrim">
@@ -49,12 +49,12 @@ const Cotizacion = () => {
         </Link></Box>
          </Box>
       <div>
-        <Typography style={{ fontSize: '1.875em', textAlign: "center", color: "rgba(123, 123, 123, 1)" }}  >
+        <Typography style={{  fontSize: isNonMobileScreens?'1.875em':"1em", textAlign: "center", color: "rgba(123, 123, 123, 1)" }}  >
           Ten en consideración los siguientes puntos:
         </Typography>
       </div>
       <div style={{
-        fontSize: '1.25em', display: 'flex', justifyContent: 'center',paddingBottom:"93px"
+        fontSize: isNonMobileScreens?'1.25em':"0.75em",  display: 'flex', justifyContent: 'center',paddingBottom:"93px"
       }} >
         <ul  >
 

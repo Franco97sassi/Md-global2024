@@ -24,10 +24,10 @@ const AsesoriaPrim = () => {
   return (
     <div>
        <header>{isNonMobileScreens ? <Navbar /> : <HamburguesaMenu />}</header>
-      <Typography style={{ fontSize: '3em', fontWeight: 600, paddingTop: "219px" }} className={classes.centeredText} >
+      <Typography style={{ fontSize: isNonMobileScreens?'3em':"1.5em", fontWeight: 600, paddingTop:isNonMobileScreens? "219px":"25px"  }} className={classes.centeredText} >
         ASESORÍA
       </Typography>
-      <Typography style={{ fontSize: '1.875em',paddingBottom:"63px" }} className={classes.centeredText}>
+      <Typography style={{ fontSize: isNonMobileScreens?'1.875em':"1em" ,paddingBottom:"63px" }} className={classes.centeredText}>
         Con nuestras asesorías puedes aclarar tus ideas para tus proyectos de importación
       </Typography>
       <Box style={{ display: 'flex',
@@ -49,7 +49,7 @@ const AsesoriaPrim = () => {
 }}>
           <img src={asesoria1} alt="" />
 
-          <Typography style={{ marginTop: '7px', color: "#8F0D3C", fontSize: "30px",paddingTop:"50px"}}>
+          <Typography style={{  color: "#8F0D3C", fontSize: "30px",paddingTop:"55px"}}>
             Quiero una llamada
           </Typography>
         </Box>
@@ -71,12 +71,12 @@ const AsesoriaPrim = () => {
         </Box>
       </Box>
       <div>
-        <Typography style={{paddingTop:"59px", fontSize: '1.875em', textAlign: "center", color: "rgba(123, 123, 123, 1)" }}  >
+        <Typography style={{paddingTop:"59px",  fontSize: isNonMobileScreens?'1.875em':"1em", textAlign: "center", color: "rgba(123, 123, 123, 1)" }}  >
           Ten en consideración los siguientes puntos:
         </Typography>
       </div>
       <div style={{
-        fontSize: '1.25em', display: 'flex', justifyContent: 'center',paddingBottom:"93px"
+        fontSize: isNonMobileScreens?'1.25em':"0.75em",  display: 'flex', justifyContent: 'center',paddingBottom:"93px"
       }} >
         <ul  >
 

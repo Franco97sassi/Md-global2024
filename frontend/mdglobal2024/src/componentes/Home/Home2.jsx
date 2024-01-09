@@ -1,8 +1,6 @@
 import construccion2 from "../../assets/Home/home2.png";
 import { isMobile } from "react-device-detect";
 import './styles.css'
-import { Link } from "react-router-dom";
-
 function Home2() {
   return (
     <div
@@ -78,11 +76,9 @@ function Home2() {
             justifyContent: "left",
           }}
         >
-            <Link to={'/cotizar'}>
           <button
             className="botonHome1"
             style={{
-        
               color: "white",
               paddingLeft: "2.5rem",
               paddingRight: "2.5rem",
@@ -91,14 +87,10 @@ function Home2() {
               width: "240px",
               height: "43px",
               fontSize: "20px",
-              justifySelf: 'center',
-              cursor: 'pointer',
-              marginLeft: isMobile ? '7%' : null
             }}
           >
             Cotizar ahora
           </button>
-          </Link>
         </div>
       </div>
       <div style={{ marginTop: isMobile ? '0.5rem' : "5rem", marginRight: "5%" }}>

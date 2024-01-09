@@ -12,7 +12,7 @@ import HamburguesaMenu from '../Menu';
 const useStyles = makeStyles((theme) => ({
   centeredText: {
     textAlign: 'center',
-    color: "#8F0D3C",
+    color: "#8F0D3C", fontFamily: 'Archivo, sans-serif', 
   },
   tabRoot: {
     backgroundColor: '#FFFFFF', // Color de fondo para las pestañas no seleccionadas
@@ -71,24 +71,25 @@ const AsesoriaQuin = () => {
       backgroundColor: value === tabValue ? 'white' : '', // Aplica blanco solo a la pestaña seleccionada
       borderRadius: "40px",
       color: "black",
- 
+      fontSize:isNonMobileScreens?"1.5625em":"0.75em",
+      fontFamily: 'Archivo, sans-serif', 
     };};
   
   return (
     <div>
        <header>{isNonMobileScreens ? <Navbar /> : <HamburguesaMenu />}</header>
       <Box  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>   
-       <Typography  style={{fontSize: '3em' ,fontWeight:600,paddingTop:"219px"}}className={classes.centeredText}  >
+      <Typography style={{ fontSize: isNonMobileScreens?'3em':"1.5em", fontWeight: 600, paddingTop:isNonMobileScreens? "219px":"25px"  }} className={classes.centeredText} >
             Costos
         </Typography>
-        <Typography style={{ fontSize: '1.875em',paddingBottom:"27px",color:"rgba(143, 150, 164, 1)" }}  >
+        <Typography style={{textAlign:"center", fontSize: isNonMobileScreens?'1.875em':"1em" ,paddingBottom:"27px",color:"rgba(143, 150, 164, 1)" }}  >
           En este apartado se desglosarán los costos de importación por las diferentes vías
         </Typography>
          <TabContext value={value}  >
-         <Box sx={{ borderBottom: 1, borderColor: 'divider'  }} style={{borderRadius:"50px",backgroundColor:"rgba(143, 13, 60, 1)",display:"flex",flexDirection:"row",justifyContent:"center",marginBottom:"25px"}}>
+         <Box sx={{ borderBottom: 1, borderColor: 'divider'  }}  style={{height:"57px",borderRadius:"50px",backgroundColor:"rgba(143, 13, 60, 1)" ,marginBottom:"25px",width:isNonMobileScreens?"38.06875em":"90%",display:"flex",flexDirection:"row",justifyContent:"center" }}>
         <TabList onChange={handleChange} aria-label="lab API tabs example">
-  <Tab label="Fronteriza" value="1" style={{ ...getTabPanelStyle('1')  }} />
-  <Tab label="Marítima" value="2" style={{ ...getTabPanelStyle('2')}} />
+  <Tab label="Fronteriza" value="1" style={{ ...getTabPanelStyle('1') }} />
+  <Tab label="Marítima" value="2" style={{ ...getTabPanelStyle('2') }} />
   <Tab label="Aérea" value="3" style={{ ...getTabPanelStyle('3') }} />
 </TabList>
         </Box>
@@ -102,8 +103,8 @@ const AsesoriaQuin = () => {
             fontWeight:700,
               width: isNonMobileScreens?"640px":"50%", height: "47px", borderRadius: "40px", padding: '0 20px'
           }}>
-           <Typography style={{fontWeight:700}}>Concepto</Typography>
-           <Typography style={{fontWeight:700}}>Importación</Typography>
+           <Typography style={{fontWeight:700,fontSize:isNonMobileScreens? '1.875em':"1em"  }}>Concepto</Typography>
+           <Typography style={{fontWeight:700,fontSize:isNonMobileScreens? '1.875em':"1em"}}>Importación</Typography>
           </Box> 
         {items.map((item, index) => (
  
@@ -112,8 +113,8 @@ const AsesoriaQuin = () => {
             backgroundColor: "rgba(240, 240, 240, 1)",color:"rgba(143, 13, 60, 1)"
             ,width: isNonMobileScreens?"1124px":"50%", height: "47px", borderRadius: "40px", padding: '0 20px'
           }}>
-            <Typography>{item}</Typography>
-            <Typography>{prices[index]}</Typography>
+            <Typography style={{fontWeight:300,fontSize:isNonMobileScreens? '1.875em':"1em"    }}>{item}</Typography>
+            <Typography style={{fontWeight:300,fontSize:isNonMobileScreens? '1.875em':"1em" }}>{prices[index]}</Typography>
           </Box> 
         )) }
         <Box style={{  
@@ -121,12 +122,12 @@ const AsesoriaQuin = () => {
             fontWeight:700,
             width: isNonMobileScreens?"640px":"50%",height: "47px", borderRadius: "40px", padding: '0 20px'
           }}>
-            <Typography style={{fontWeight:700}}>Total</Typography>
-            <Typography  style={{fontWeight:700}}>$11.450,00</Typography>
+            <Typography style={{fontWeight:700,fontSize:isNonMobileScreens? '1.875em':"1em"}}>Total</Typography>
+            <Typography  style={{fontWeight:700,fontSize:isNonMobileScreens? '1.875em':"1em"}}>$11.450,00</Typography>
           </Box> 
 
         <Link to="/asesoriaSex" style={{ textDecoration: 'none' }}>
-          <Button style={{ backgroundColor: 'rgba(143, 13, 60, 1)', borderRadius: "40px", color: 'white' }} variant="contained">
+          <Button style={{fontSize:isNonMobileScreens? '1.25em':"1em", backgroundColor: 'rgba(143, 13, 60, 1)', borderRadius: "40px", color: 'white' }} variant="contained">
             Personalizar Cotización
           </Button>
         </Link>  </Box> 

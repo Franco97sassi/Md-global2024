@@ -68,7 +68,6 @@ function Servicios() {
               <button
                 className="flechitaLeft"
                 style={{
-                  backgroundColor: 'transparent',
                   border: "0px",
                   margin: "20px",
                   height: "fit-content",
@@ -91,7 +90,6 @@ function Servicios() {
               <button
                 className="flechitaRight"
                 style={{
-                  backgroundColor: 'transparent',
                   border: "0px",
                   margin: "20px",
                   transform: "rotate(180deg)",

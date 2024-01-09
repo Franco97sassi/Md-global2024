@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import mapa from "../../assets/Aduanas/mapa.png"
-import { Box, Typography } from '@material-ui/core'
+import { Box, Typography, useMediaQuery } from '@material-ui/core'
 import Navbar from "../Navbar";
 import Footer from "../Footer";
 import Tab from '@mui/material/Tab';
@@ -12,14 +12,15 @@ import { isMobile } from 'react-device-detect';
 
 const Aduanas = () => {
   const [value, setValue] = useState('1');
+  const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
   const mapIframeStyle = {
-    width: isMobile ? '90vw' : '76.0625em',  // Ancho relativo en móviles
-    height: isMobile ? 'auto' : '37.875em',  // Altura automática en móviles
+    width: isNonMobileScreens ?   '76.0625em':'70vw' ,  // Ancho relativo en móviles
+    height: isNonMobileScreens ?  '37.875em':"70vh" , // Altura automática en móviles
     borderRadius: '40px',
   };
 
@@ -34,6 +35,7 @@ const Aduanas = () => {
       backgroundColor: value === tabValue ? 'white' : '', // Aplica blanco solo a la pestaña seleccionada
       borderRadius: "40px",
       color: "black",
+      fontSize:isNonMobileScreens ?"25px":"0.75em"
  
     };
   };
@@ -43,18 +45,18 @@ const Aduanas = () => {
   };
   return (
     <div>
-       <header>{isMobile ? <HamburguesaMenu /> : <Navbar />}</header>
-<Box style={{paddingTop:"219px",textAlign:"center"}}>  
-        <Typography style={{  fontSize: '3em' ,fontWeight:600, color: "#8F0D3C" }}>
+  <header>{isMobile ? <HamburguesaMenu /> : <Navbar />}</header>
+<Box style={{paddingTop:isNonMobileScreens?"219px":"25px",textAlign:"center"}}>  
+        <Typography style={{   fontSize: isNonMobileScreens?'3em':"1.5em",fontWeight:600, color: "#8F0D3C" }}>
         ADUANAS
         </Typography>
-        <Typography style={{   fontSize:"1.875em", color: "rgba(143, 150, 164, 1)", marginBottom:"23px"
+        <Typography style={{  fontSize: isNonMobileScreens?'1.875em':"1em" , color: "rgba(143, 150, 164, 1)", marginBottom:"23px"
 }}>
         Con nuestras asesorías puedes aclarar tus ideas para tus proyectos de importación
         </Typography></Box>
         <Box
         style={{
-          maxWidth: isMobile ? '90%' : '25em', // Ancho máximo relativo en móviles
+          maxWidth: isNonMobileScreens ? '30%' : '90%', // Ancho máximo relativo en móviles
           margin: '0 auto',  // Para centrar el menú horizontalmente
         }}
       >
@@ -67,9 +69,9 @@ const Aduanas = () => {
 </TabList>
         </Box>
         <Box style={{display:"flex",flexDirection:"row",justifyContent:"center" }}>  
-        <TabPanel value="1"> <iframe src="https://www.google.com/maps/d/embed?mid=1jiu6HtrEZ4Wrl_rnYlpc9iUiFGkZHqc&ehbc=2E312F" style={mapIframeStyle} width="40em" height="30em"></iframe></TabPanel>
-        <TabPanel value="2"><iframe src="https://www.google.com/maps/d/embed?mid=1IOKxKqIpCkIWYed6H1f-oK80DadUYEA&ehbc=2E312F" style={mapIframeStyle} width="40em" height="30em"></iframe></TabPanel>
-        <TabPanel value="3"><iframe src="https://www.google.com/maps/d/embed?mid=1zhULW3mzp2nMTOJyUJ-yNZdxc5CXRJ4&ehbc=2E312F" style={mapIframeStyle} width="40em" height="30em"></iframe></TabPanel>
+        <TabPanel value="1"> <iframe src="https://www.google.com/maps/d/embed?mid=1jiu6HtrEZ4Wrl_rnYlpc9iUiFGkZHqc&ehbc=2E312F" style={mapIframeStyle} width={isNonMobileScreens?"40em":"30em"} height={isNonMobileScreens?"30em":"20em"}></iframe></TabPanel>
+        <TabPanel value="2"><iframe src="https://www.google.com/maps/d/embed?mid=1IOKxKqIpCkIWYed6H1f-oK80DadUYEA&ehbc=2E312F" style={mapIframeStyle} width={isNonMobileScreens?"40em":"30em"} height={isNonMobileScreens?"30em":"20em"}></iframe></TabPanel>
+        <TabPanel value="3"><iframe src="https://www.google.com/maps/d/embed?mid=1zhULW3mzp2nMTOJyUJ-yNZdxc5CXRJ4&ehbc=2E312F" style={mapIframeStyle} width={isNonMobileScreens?"40em":"30em"} height={isNonMobileScreens?"30em":"20em"}></iframe></TabPanel>
         </Box>
          </TabContext>
     </Box>

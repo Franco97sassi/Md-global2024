@@ -30,25 +30,12 @@ const Nosotros = () => {
   <header>{isMobile ? <HamburguesaMenu /> : <Navbar />}</header>
 
 
-{/* 
-      <Stack direction="row" spacing={2}>
-
-        <Item sx={{ paddingTop: "119px" }}> 
-        
-        </Item>
-        <Item>
-          <Typography sx={{ paddingTop: "337px" }}  style={{color:"#8F0D3C",fontSize:"48px"} } >
-            Nosotros
-          </Typography>
-          <Typography  style={{color:"#8F0D3C",fontSize:"20px"}}>
-            La Agencia Aduanal MD Global Trade Services SC surge con el objetivo de proporcionar un servicio de primer nivel, que garantice la certidumbre de nuestros clientes, en sus operaciones de comercio exterior, contando con tecnología de punta y personal capacitado, que ayuden al cumplimiento de las exigencias delcliente. Empresa Joven, pero con personal competitivo, con ideas nuevas y en busca de la mejora continua. Empresa formada en el 2002, por el agente aduanal Ing. Maria Elena Moreno Durazo. Patente nacional 3849, con aduana de adscripción en Nogales Sonora y con operaciones en la Cd. De Hermosillo, por la aduana de Guaymas Sonora.
-
-          </Typography></Item>
-      </Stack> */}
+ 
+     
       <Box sx={{ Width: '100%',paddingTop:isNonMobileScreens? "119px" :"25px"}}>
       <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
-      <Grid item xs={12} md={6} style={{marginLeft:"0px", padding:"10px",paddingTop: "119px", textAlign: isNonMobileScreens ? "left" : "center" }}>
-            <img src={nosotros} alt="Nosotros" style={{ paddingLeft:"10px",maxWidth: '100%', width: '100%', height: '100%' }} />
+      <Grid item xs={12} md={6} style={{marginLeft:"0px", padding:isNonMobileScreens ?"10px":"0px",paddingTop: isNonMobileScreens?"119px":"25px", textAlign: isNonMobileScreens ? "left" : "center" }}>
+            <img src={nosotros} alt="Nosotros" style={{ paddingLeft:"10px",maxWidth: '100%', width: isNonMobileScreens?'100%':"75%", height: '100%' }} />
           </Grid>
         <Grid item xs={12} md={6}  style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' ,
         textAlign:isNonMobileScreens?"left":"center"

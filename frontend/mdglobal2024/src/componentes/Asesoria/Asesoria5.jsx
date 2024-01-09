@@ -9,11 +9,14 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import { makeStyles } from '@material-ui/core/styles';
 import HamburguesaMenu from '../Menu';
+ 
 const useStyles = makeStyles((theme) => ({
+ 
   centeredText: {
     textAlign: 'center',
     color: "#8F0D3C", fontFamily: 'Archivo, sans-serif', 
   },
+   
   tabRoot: {
     backgroundColor: '#FFFFFF', // Color de fondo para las pestañas no seleccionadas
     borderRadius: '20px', // Radio de borde para las pestañas
@@ -74,11 +77,12 @@ const AsesoriaQuin = () => {
       fontSize:isNonMobileScreens?"1.5625em":"0.75em",
       fontFamily: 'Archivo, sans-serif', 
     };};
+    
   
   return (
     <div>
        <header>{isNonMobileScreens ? <Navbar /> : <HamburguesaMenu />}</header>
-      <Box  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh' }}>   
+      <Box  style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minHeight: '100vh'  }}>   
       <Typography style={{ fontSize: isNonMobileScreens?'3em':"1.5em", fontWeight: 600, paddingTop:isNonMobileScreens? "219px":"25px"  }} className={classes.centeredText} >
             Costos
         </Typography>
@@ -97,7 +101,7 @@ const AsesoriaQuin = () => {
           <TabPanel value="2"> {/* Contenido del TabPanel 2 */}</TabPanel>
           <TabPanel value="3"> {/* Contenido del TabPanel 3 */}</TabPanel>
         </TabContext>
-        <Box  className={classes.mainContainer} style={{marginBottom:"80px"}}> 
+        <Box  className={classes.mainContainer} style={{marginBottom:"80px",borderRadius:"40px"}}> 
         <Box style={{  
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',color:"rgba(143, 13, 60, 1)",
             fontWeight:700,

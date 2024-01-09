@@ -35,7 +35,7 @@ const AsesoriaCuar = () => {
         <Box style={{ display: 'flex',flexDirection:isNonMobileScreens?"row":"column", justifyContent: 'center', width: '100%',gap:"65px" }}>
         <Link to="/asesoriaQuin"> 
         <Box style={{
-  width: isNonMobileScreens ? '27.635em' : '90%', // Ancho más pequeño en móviles
+  width: isNonMobileScreens ? '27.635em' : '70%', // Ancho más pequeño en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   borderRadius:"40px",
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
@@ -45,14 +45,14 @@ const AsesoriaCuar = () => {
   alignItems: 'center',
   margin: '10px auto' // Margen para centrar en móviles
 }}>
-        <img src={asesoria1} alt="" />
+        <img src={asesoria1} alt=""  width={isNonMobileScreens ? 'auto' : '50%'}   />
          
-        <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px" }}>
+        <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:isNonMobileScreens ?"30px":"20px" }}>
         Marítimo
     </Typography>
           </Box></Link>  
        <Link to="/asesoriaQuin">  <Box style={{
-  width: isNonMobileScreens ? '27.635em' : '90%', // Ancho más pequeño en móviles
+  width: isNonMobileScreens ? '27.635em' : '70%', // Ancho más pequeño en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   borderRadius:"40px",
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
@@ -61,13 +61,13 @@ const AsesoriaCuar = () => {
   background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
   alignItems: 'center',
   margin: '10px auto' // Margen para centrar en móviles
-}}>   <img src={asesoria2} alt="" />
-    <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px"  }}>
+}}>   <img src={asesoria2} alt="" width={isNonMobileScreens ? 'auto' : '50%'} />
+    <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:isNonMobileScreens ?"30px":"20px" }}>
     Aéreo
     </Typography>
     </Box></Link>
     <Link to="/asesoriaQuin">  <Box style={{
-  width: isNonMobileScreens ? '27.635em' : '90%', // Ancho más pequeño en móviles
+  width: isNonMobileScreens ? '27.635em' : '70%', // Ancho más pequeño en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   borderRadius:"40px",
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
@@ -76,8 +76,8 @@ const AsesoriaCuar = () => {
   background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
   alignItems: 'center',
   margin: '10px auto' // Margen para centrar en móviles
-}}>   <img src={asesoria3} alt="" />
-    <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px"  }}>
+}}>   <img src={asesoria3} alt="" width={isNonMobileScreens ? 'auto' : '50%'}/>
+    <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:isNonMobileScreens ?"30px":"20px"  }}>
     Terrestre
     </Typography>
     </Box></Link>
@@ -87,7 +87,7 @@ const AsesoriaCuar = () => {
       Ten en consideración los siguientes puntos:
       </Typography>
        </div>
-       <div style={{
+       <div style={{paddingRight:"35px",textAlign:"center",
         fontSize: isNonMobileScreens?'1.25em':"0.75em",  display: 'flex', justifyContent: 'center',paddingBottom:"93px"
       }} >  
               <ul  >

@@ -9,11 +9,12 @@ import TabList from '@mui/lab/TabList';
 import TabPanel from '@mui/lab/TabPanel';
 import HamburguesaMenu from '../Menu';
 import { isMobile } from 'react-device-detect';
-
+ 
 const Aduanas = () => {
   const [value, setValue] = useState('1');
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
 
+   
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
@@ -24,11 +25,11 @@ const Aduanas = () => {
     borderRadius: '40px',
   };
 
-  const tabStyle = {
-    "&.MuiSelected": {
-      borderBottom: "2px solid transparent", // Elimina el subrayado azul
-    },
-  };
+  // const tabStyle = {
+  //   "&.MuiSelected": {
+  //     borderBottom: "2px solid transparent", // Elimina el subrayado azul
+  //   },
+  // };
 
   const getTabPanelStyle = (tabValue) => {
     return {
@@ -39,18 +40,24 @@ const Aduanas = () => {
  
     };
   };
-  const tabLabelStyle = {
-    color: value === '1' ? 'black' : 'rgba(143, 150, 164, 1)',
-    borderBottom: '2px solid transparent',
+
+  const tabStyle = {
+    '&.MuiFocused': {
+      outline: 'none', // Elimina el subrayado en el foco
+    },
+    '&.MuiSelected': {
+      borderBottom: "2px solid transparent",
+    }
   };
   return (
+ 
     <div>
   <header>{isMobile ? <HamburguesaMenu /> : <Navbar />}</header>
 <Box style={{paddingTop:isNonMobileScreens?"219px":"25px",textAlign:"center"}}>  
         <Typography style={{   fontSize: isNonMobileScreens?'3em':"1.5em",fontWeight:600, color: "#8F0D3C" }}>
         ADUANAS
         </Typography>
-        <Typography style={{  fontSize: isNonMobileScreens?'1.875em':"1em" , color: "rgba(143, 150, 164, 1)", marginBottom:"23px"
+        <Typography style={{  fontSize: isNonMobileScreens?'1.875em':"1em" , color: "rgba(143, 150, 164, 1)", marginBottom:isNonMobileScreens?"23px":"93px"
 }}>
         Con nuestras asesorías puedes aclarar tus ideas para tus proyectos de importación
         </Typography></Box>
@@ -61,12 +68,13 @@ const Aduanas = () => {
         }}
       >
       <TabContext value={value} >
-        <Box sx={{ borderBottom: 1, borderColor: 'divider'  }} style={{borderRadius:"50px",backgroundColor:"rgba(143, 13, 60, 1)",display:"flex",flexDirection:"row",justifyContent:"center",marginBottom:"25px"}}>
+        <Box sx={{ borderBottom: 1, borderColor: 'divider'  }} style={{borderRadius:"50px",backgroundColor:"rgba(143, 13, 60, 1)",
+       width:"100%", display:"flex",flexDirection:"row",justifyContent:"center",marginBottom:"25px"}}>
         <TabList onChange={handleChange} aria-label="lab API tabs example">
-  <Tab label="Fronteriza" value="1" style={{ ...getTabPanelStyle('1')  }} />
-  <Tab label="Marítima" value="2" style={{ ...getTabPanelStyle('2')}} />
-  <Tab label="Aérea" value="3" style={{ ...getTabPanelStyle('3') }} />
-</TabList>
+              <Tab  label="Fronteriza" value="1" style={{ ...tabStyle, ...getTabPanelStyle('1') }}  />
+              <Tab label="Marítima" value="2" style={{ ...tabStyle, ...getTabPanelStyle('2') }} />
+              <Tab label="Aérea" value="3" style={{ ...tabStyle, ...getTabPanelStyle('3') }} />
+            </TabList>
         </Box>
         <Box style={{display:"flex",flexDirection:"row",justifyContent:"center" }}>  
         <TabPanel value="1"> <iframe src="https://www.google.com/maps/d/embed?mid=1jiu6HtrEZ4Wrl_rnYlpc9iUiFGkZHqc&ehbc=2E312F" style={mapIframeStyle} width={isNonMobileScreens?"40em":"30em"} height={isNonMobileScreens?"30em":"20em"}></iframe></TabPanel>
@@ -78,6 +86,7 @@ const Aduanas = () => {
         
         <Footer/>
     </div>
+ 
   )
 }
 

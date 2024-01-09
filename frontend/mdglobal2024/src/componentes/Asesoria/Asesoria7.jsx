@@ -18,10 +18,10 @@ const AsesoriaSep = () => {
         alignItems: 'center',
         alignContent:"center"
       }}>
-        <Typography style={{ fontWeight: 600, fontSize: isNonMobileScreens?'3em':"1.875em", color: 'rgba(143, 13, 60, 1)' }}>
+        <Typography style={{ textAlign:"center",fontWeight: 600, fontSize: isNonMobileScreens?'3em':"1.875em", color: 'rgba(143, 13, 60, 1)' }}>
           ¡Gracias por contactarnos!
         </Typography>
-        <Typography style={{ fontWeight: 300, fontSize: isNonMobileScreens?'1.875em':"1em", color: 'rgba(143, 13, 60, 1)' }}>
+        <Typography style={{padding:isNonMobileScreens?"0px":"10px", textAlign:"center",fontWeight: 300, fontSize: isNonMobileScreens?'1.875em':"1em", color: 'rgba(143, 13, 60, 1)' }}>
           En seguida uno de nuestros operadores se pondrá en contacto contigo.
         </Typography>
       </Box>

@@ -34,9 +34,10 @@ const AsesoriaSeg = () => {
                     flexDirection:isNonMobileScreens?"row":"column",
 
         justifyContent: 'center',gap:"103px", width: '100%' }}>
-         
+             <Link to="/asesoriaTer"> 
+
          <Box style={{
-  width: isNonMobileScreens ? '37.9375em' : '90%', // Ancho relativo en móviles
+  width: isNonMobileScreens ? '37.9375em' : '70%', // Ancho relativo en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
   display: 'flex', 
@@ -47,17 +48,16 @@ const AsesoriaSeg = () => {
   borderRadius: "40px",
   margin: isNonMobileScreens ? '0' : '10px auto', // Margen para centrar en móviles
 }}>
-    <Link to="/asesoriaTer"> 
-        <img src={asesoria3} alt="" />
+         <img src={asesoria3} alt="" width={isNonMobileScreens ? 'auto' : '50%'}/>
          
-        <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px" }}>
+        <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:isNonMobileScreens ?"30px":"20px" }}>
         Despacho Anual
 
     </Typography>
-    </Link> </Box> 
+     </Box>  </Link>
     <Link to="/asesoriaSex">
     <Box style={{
-  width: isNonMobileScreens ? '37.9375em' : '90%', // Ancho relativo en móviles
+  width: isNonMobileScreens ? '37.9375em' : '70%', // Ancho relativo en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
   display: 'flex', 
@@ -67,8 +67,8 @@ const AsesoriaSeg = () => {
   alignItems: 'center',
   borderRadius: "40px",
   margin: isNonMobileScreens ? '0' : '10px auto', // Margen para centrar en móviles
-}}>  <img src={asesoria4} alt="" /> 
-    <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px"  }}>
+}}>  <img src={asesoria4} alt="" width={isNonMobileScreens ? 'auto' : '50%'}/> 
+    <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:isNonMobileScreens ?"30px":"20px"  }}>
     Logística
     </Typography>
     </Box>  </Link>
@@ -78,7 +78,7 @@ const AsesoriaSeg = () => {
       Ten en consideración los siguientes puntos:
       </Typography>
        </div>
-       <div style={{
+       <div style={{paddingRight:"35px",textAlign:"center",
         fontSize: isNonMobileScreens?'1.25em':"0.75em",  display: 'flex', justifyContent: 'center',paddingBottom:"93px"
       }} >       
               <ul  >

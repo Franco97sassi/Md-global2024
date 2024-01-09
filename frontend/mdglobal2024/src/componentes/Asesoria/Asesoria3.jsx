@@ -37,7 +37,7 @@ const AsesoriaTer = () => {
         justifyContent: 'center',gap:"65px", width: '100%' }}>
         <Link to="/asesoriaCuar">  
         <Box style={{
-  width: isNonMobileScreens ? '27.635em' : '90%', // Ancho más pequeño en móviles
+  width: isNonMobileScreens ? '27.635em' : '70%', // Ancho más pequeño en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   borderRadius:"40px",
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
@@ -46,14 +46,14 @@ const AsesoriaTer = () => {
   background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
   alignItems: 'center',
   margin: '10px auto' // Margen para centrar en móviles
-}}> <img src={asesoria1} alt="" />
-    <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px"  }}>
+}}> <img src={asesoria1} alt="" width={isNonMobileScreens ? 'auto' : '50%'}/>
+    <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:isNonMobileScreens ?"30px":"20px"  }}>
     Exportar
     </Typography>
     </Box></Link>
           <Link to="/asesoriaCuar">  
           <Box style={{
-  width: isNonMobileScreens ? '27.635em' : '90%', // Ancho más pequeño en móviles
+  width: isNonMobileScreens ? '27.635em' : '70%', // Ancho más pequeño en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   borderRadius:"40px",
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
@@ -62,13 +62,13 @@ const AsesoriaTer = () => {
   background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
   alignItems: 'center',
   margin: '10px auto' // Margen para centrar en móviles
-}}>   <img src={asesoria1} alt="" />
-    <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px"  }}>
+}}>   <img src={asesoria1} alt="" width={isNonMobileScreens ? 'auto' : '50%'}/>
+    <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:isNonMobileScreens ?"30px":"20px"  }}>
     Importar
     </Typography>
     </Box></Link>
     <Link to="/asesoriaSex">  <Box style={{
-  width: isNonMobileScreens ? '27.635em' : '90%', // Ancho más pequeño en móviles
+  width: isNonMobileScreens ? '27.635em' : '70%', // Ancho más pequeño en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   borderRadius:"40px",
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
@@ -77,8 +77,8 @@ const AsesoriaTer = () => {
   background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
   alignItems: 'center',
   margin: '10px auto' // Margen para centrar en móviles
-}}>   <img src={asesoria2} alt="" />
-     <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px"  }}>
+}}>   <img src={asesoria2} alt="" width={isNonMobileScreens ? 'auto' : '50%'} />
+     <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:isNonMobileScreens ?"30px":"20px"  }}>
     Otro Régimen 
     </Typography> 
     </Box></Link>
@@ -88,7 +88,7 @@ const AsesoriaTer = () => {
       Ten en consideración los siguientes puntos:
       </Typography>
        </div>
-       <div style={{
+       <div style={{paddingRight:"35px",textAlign:"center",
         fontSize: isNonMobileScreens?'1.25em':"0.75em",  display: 'flex', justifyContent: 'center',paddingBottom:"93px"
       }} >  
               <ul  >

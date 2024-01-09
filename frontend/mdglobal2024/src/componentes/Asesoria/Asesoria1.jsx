@@ -36,7 +36,7 @@ const AsesoriaPrim = () => {
        justifyContent: 'center',gap:"103px", width: '100%' }}>
 
 <Box style={{
-  width: isNonMobileScreens ? '37.9375em' : '90%', // Ancho relativo en móviles
+  width: isNonMobileScreens ? '37.9375em' : '70%', // Ancho relativo en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
   display: 'flex', 
@@ -47,14 +47,15 @@ const AsesoriaPrim = () => {
   borderRadius: "40px",
   margin: isNonMobileScreens ? '0' : '10px auto', // Margen para centrar en móviles
 }}>
-          <img src={asesoria1} alt="" />
+          <img src={asesoria1} alt="" width={isNonMobileScreens ? 'auto' : '50%'} />
 
-          <Typography style={{  color: "#8F0D3C", fontSize: "30px",paddingTop:"55px"}}>
+          <Typography style={{  color: "#8F0D3C", fontSize:isNonMobileScreens ?"30px":"20px",
+           paddingTop:isNonMobileScreens ?"55px":"5px"}}>
             Quiero una llamada
           </Typography>
         </Box>
         <Box style={{
-  width: isNonMobileScreens ? '37.9375em' : '90%', // Ancho relativo en móviles
+  width: isNonMobileScreens ? '37.9375em' : '70%', // Ancho relativo en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
   display: 'flex', 
@@ -64,8 +65,8 @@ const AsesoriaPrim = () => {
   alignItems: 'center',
   borderRadius: "40px",
   margin: isNonMobileScreens ? '0' : '10px auto', // Margen para centrar en móviles
-}}>  <img src={asesoria2} alt="" />
-          <Typography style={{ marginTop: '7px', color: "#8F0D3C", fontSize: "30px" }}>
+}}>  <img src={asesoria2} alt="" width={isNonMobileScreens ? 'auto' : '50%'}/>
+          <Typography style={{ marginTop: '7px', color: "#8F0D3C", fontSize:isNonMobileScreens ?"30px":"20px" }}>
             Quiero una Reunión
           </Typography>
         </Box>
@@ -75,7 +76,7 @@ const AsesoriaPrim = () => {
           Ten en consideración los siguientes puntos:
         </Typography>
       </div>
-      <div style={{
+      <div style={{paddingRight:"35px",textAlign:"center",
         fontSize: isNonMobileScreens?'1.25em':"0.75em",  display: 'flex', justifyContent: 'center',paddingBottom:"93px"
       }} >
         <ul  >

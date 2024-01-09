@@ -17,6 +17,16 @@ const useStyles = makeStyles({
   centeredList: {
     paddingLeft: 0, // Elimina el relleno predeterminado
   },
+  imageContainer: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: '100%', // Asegura que el contenedor ocupe el ancho completo
+  },
+  imageStyle: {
+    width: '90%', // Ajusta este porcentaje según tus necesidades
+    height: 'auto', // Mantiene la proporción de la imagen
+    margin: 'auto', // Centra la imagen horizontalmente
+  },
 });
 const Cotizacion = () => {
   const classes = useStyles();
@@ -35,7 +45,7 @@ const Cotizacion = () => {
       flexDirection:isNonMobileScreens?"row":"column",
        justifyContent: 'center', width: '100%' ,gap:isNonMobileScreens?"103px":"0px",paddingBottom:"3.25em",
         }}>
-        <Box>  
+        <Box >  
         <Link to="/asesoriaPrim">
           
 
@@ -53,7 +63,7 @@ const Cotizacion = () => {
           Ten en consideración los siguientes puntos:
         </Typography>
       </div>
-      <div style={{
+      <div style={{paddingRight:"35px",textAlign:"center",
         fontSize: isNonMobileScreens?'1.25em':"0.75em",  display: 'flex', justifyContent: 'center',paddingBottom:"93px"
       }} >
         <ul  >

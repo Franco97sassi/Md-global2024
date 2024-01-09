@@ -83,9 +83,51 @@
     font-size: 30px;
     margin-top: 5rem;
   }
+  .logo{
+    width: 300px;
+    height: 300px;
+  }
 
 
 }
+
+
+
+@media (max-width: 1280px) {
+  .fotohome1 {
+    height: 453px;
+    width: 586px;
+  }
+  .texto {
+    margin-left: 2%;
+   
+  }
+  .textoo1 {
+    font-size: 25px;
+  }
+  .textoo2 {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .conteiner {
+    gap: 4rem;
+    margin-top: 5rem
+  }
+  .textoHOME3-2{
+    font-size: 20px;
+  }
+  .textoHOME3{
+    font-size: 30px;
+    margin-top: 5rem;
+  }
+  .logo{
+    width: 250px;
+    height: 250px;
+  }
+
+
+}
+
 
 
 @media (max-width: 765px) {

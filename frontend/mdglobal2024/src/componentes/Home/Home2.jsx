@@ -92,7 +92,8 @@ function Home2() {
               height: "43px",
               fontSize: "20px",
               justifySelf: 'center',
-              cursor: 'pointer'
+              cursor: 'pointer',
+              marginLeft: isMobile ? '7%' : null
             }}
           >
             Cotizar ahora

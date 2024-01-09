@@ -90,7 +90,8 @@ function Home2() {
               width: "240px",
               height: "43px",
               fontSize: "20px",
-              marginLeft: isMobile ? '7%' : null
+              marginLeft: isMobile ? '7%' : null,
+              cursor: "pointer"
             }}
           >
             Cotizar ahora

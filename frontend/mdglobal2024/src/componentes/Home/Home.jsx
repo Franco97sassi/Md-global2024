@@ -86,6 +86,7 @@ function Home() {
                     height: "43px",
                     fontSize: "20px",
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+                    cursor: "pointer"
                   }}
                 >
                   Cotizar ahora
@@ -103,6 +104,7 @@ function Home() {
                       width: "240px",
                       height: "43px",
                       fontSize: "20px",
+                      cursor: "pointer"
                     }}
                   >
                     Más servicios

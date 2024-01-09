@@ -67,6 +67,7 @@ function Home3() {
           <div
             style={{
               display: "flex",
+              cursor: "pointer",
               flexDirection: "column",
               justifyContent: "space-around",
               backgroundColor: "white",
@@ -97,6 +98,7 @@ function Home3() {
           <div
             style={{
               display: "flex",
+              cursor: "pointer",
               flexDirection: "column",
               justifyContent: "space-around",
               backgroundColor: "white",
@@ -129,6 +131,7 @@ function Home3() {
             style={{
               display: "flex",
               flexDirection: "column",
+              cursor: "pointer",
               justifyContent: "space-around",
               backgroundColor: "white",
               width: isHovered3 ? "400px" : "284px",

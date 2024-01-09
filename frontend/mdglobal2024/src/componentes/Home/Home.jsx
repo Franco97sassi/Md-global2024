@@ -73,6 +73,7 @@ function Home() {
                   gap: "1rem",
                 }}
               >
+                <Link to={'/cotizar'}>
                 <button
                   className="botonHome1"
                   style={{
@@ -85,10 +86,12 @@ function Home() {
                     height: "43px",
                     fontSize: "20px",
                     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+                    cursor: 'pointer'
                   }}
                 >
                   Cotizar ahora
                 </button>
+                </Link>
                 <Link to={('/servicios')}>
                   {" "}
                   <button
@@ -101,6 +104,7 @@ function Home() {
                       width: "240px",
                       height: "43px",
                       fontSize: "20px",
+                      cursor: 'pointer'
                     }}
                   >
                     Más servicios

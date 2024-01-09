@@ -230,7 +230,7 @@ const AsesoriaSex = () => {
           {/* Otros campos de texto comentados */}
           <Box style={{ display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",paddingBottom:"65px"  }}>  
           <Link to="/asesoriaSep" style={{ textDecoration: 'none' }}>
-            <Button  onClick={handleSubmit} style={{fontSize:"20px",width:"240px", display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",backgroundColor: 'rgba(143, 13, 60, 1)', borderRadius: '40px', color: 'white' }} variant="contained">
+            <Button className='boton' onClick={handleSubmit} style={{fontSize:"20px",width:"240px", display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",backgroundColor: 'rgba(143, 13, 60, 1)', borderRadius: '40px', color: 'white' }} variant="contained">
               Enviar
             </Button>
           </Link>    

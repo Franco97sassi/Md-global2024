@@ -33,18 +33,19 @@ const Cotizacion = () => {
       </Typography>
       <Box style={{ display: 'flex',
       flexDirection:isNonMobileScreens?"row":"column",
-       justifyContent: 'center', width: '100%' ,gap:"103px" }}>
+       justifyContent: 'center', width: '100%' ,gap:"103px",
+        }}>
         <Box>  
         <Link to="/asesoriaPrim">
           
 
 
-            <img src={cotizacionAsesoria} alt="" width={isNonMobileScreens?'37.9375em' : '90%'} height={isNonMobileScreens?'23.875em' : 'auto'} />
+            <img src={cotizacionAsesoria} alt="" width={isNonMobileScreens?'100%' : '90%'} height={isNonMobileScreens?'100%' : 'auto'} />
 
           
         </Link></Box>
         <Box>  <Link to="/asesoriaSeg">
-          <img src={cotizacionCotizar} alt=""  width={isNonMobileScreens?'37.9375em' : '90%'} height={isNonMobileScreens?'23.875em' : 'auto'} />
+          <img src={cotizacionCotizar} alt=""  width={isNonMobileScreens?'100%' : '90%'} height={isNonMobileScreens?'100%' : 'auto'} />
         </Link></Box>
          </Box>
       <div>

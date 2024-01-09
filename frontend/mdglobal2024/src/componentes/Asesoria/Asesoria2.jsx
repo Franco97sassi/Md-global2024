@@ -55,7 +55,7 @@ const AsesoriaSeg = () => {
 
     </Typography>
     </Link> </Box> 
-            
+    <Link to="/asesoriaSex">
     <Box style={{
   width: isNonMobileScreens ? '37.9375em' : '90%', // Ancho relativo en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
@@ -67,11 +67,11 @@ const AsesoriaSeg = () => {
   alignItems: 'center',
   borderRadius: "40px",
   margin: isNonMobileScreens ? '0' : '10px auto', // Margen para centrar en móviles
-}}>  <img src={asesoria4} alt="" /><Link to="/asesoriaSex">
+}}>  <img src={asesoria4} alt="" /> 
     <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px"  }}>
     Logística
     </Typography>
-    </Link></Box> 
+    </Box>  </Link>
     </Box>
 <div>
       <Typography  style={{paddingTop:"59px", fontSize: '1.875em',textAlign:"center",color:"rgba(123, 123, 123, 1)" }}  >

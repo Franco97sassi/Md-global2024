@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Button, Grid, TextField, Typography, makeStyles, useMediaQuery } from '@material-ui/core';
-import { Link } from 'react-router-dom';
+import { Link, unstable_HistoryRouter } from 'react-router-dom';
 import Navbar from '../Navbar';
 import Footer from '../Footer';
 import { styled } from '@mui/material/styles';
@@ -53,11 +53,39 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
   color: theme.palette.text.secondary,
 }));
-
+ 
 const AsesoriaSex = () => {
   const classes = useStyles();
+  
   const isNonMobileScreens = useMediaQuery('(min-width: 1000px)');
+  const [formValues, setFormValues] = React.useState({
+    nombre: '',
+    telefono: '',
+    destino: '',
+    volumen: '',
+    email: '',
+    origen: '',
+    tipoMercancia: '',
+    especificaciones: '',
+  });
+  const [submitAttempted, setSubmitAttempted] = React.useState(false);
 
+  const handleChange = (event) => {
+    setFormValues({ ...formValues, [event.target.name]: event.target.value });
+  };
+
+  const handleSubmit = (event) => {
+    event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+    setSubmitAttempted(true);
+    if (Object.values(formValues).every(value => value !== '')) {
+      // Lógica para enviar datos
+    }
+  };
+
+  const showError = (fieldName) => {
+    return submitAttempted && formValues[fieldName] === '';
+  };
   return (
     <div>
        <header>{isNonMobileScreens ? <Navbar /> : <HamburguesaMenu />}</header>
@@ -83,6 +111,9 @@ const AsesoriaSex = () => {
           <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
           <Grid item xs={12} md={6}  >
           <Item>  <TextField
+             name="nombre"
+             value={formValues.nombre}
+             onChange={handleChange}
             fullWidth
             rows={1}
             placeholder="Nombre"
@@ -91,8 +122,12 @@ const AsesoriaSex = () => {
               disableUnderline: true,
               className: classes.customTextField, // Aplicar la clase customTextField
             }}
-          /></Item>
+          />  {showError('nombre') && <Typography color="error">Campo requerido</Typography>}
+          </Item>
          <Item>   <TextField
+          name="telefono"
+          value={formValues.telefono}
+          onChange={handleChange}
             fullWidth
             rows={1}
             placeholder="Teléfono"
@@ -101,8 +136,11 @@ const AsesoriaSex = () => {
               disableUnderline: true,
               className: classes.customTextField, // Aplicar la clase customTextField
             }}
-          /></Item>
+          /> {showError('telefono') && <Typography color="error">Campo requerido</Typography>}</Item>
          <Item>  <TextField
+         name="destino"
+         value={formValues.destino}
+         onChange={handleChange}
             fullWidth
             rows={1}
             placeholder="Destino"
@@ -111,8 +149,11 @@ const AsesoriaSex = () => {
               disableUnderline: true,
               className: classes.customTextField, // Aplicar la clase customTextField
             }}
-          /></Item>
+          /> {showError('destino') && <Typography color="error">Campo requerido</Typography>}</Item>
          <Item>  <TextField
+         name="volumen"
+         value={formValues.volumen}
+         onChange={handleChange}
             fullWidth
             rows={1}
             placeholder="Volumen"
@@ -121,10 +162,13 @@ const AsesoriaSex = () => {
               disableUnderline: true,
               className: classes.customTextField, // Aplicar la clase customTextField
             }}
-          /></Item>
+          /> {showError('volumen') && <Typography color="error">Campo requerido</Typography>}</Item>
         </Grid>
         <Grid   item xs={12} md={6}  >
         <Item>  <TextField
+        name="email"
+        value={formValues.email}
+        onChange={handleChange}
             fullWidth
             rows={1}
             placeholder="Correo Electrónico"
@@ -133,8 +177,11 @@ const AsesoriaSex = () => {
               disableUnderline: true,
               className: classes.customTextField, // Aplicar la clase customTextField
             }}
-          /></Item>
+          /> {showError('email') && <Typography color="error">Campo requerido</Typography>}</Item>
           <Item>  <TextField
+          name="origen"
+          value={formValues.origen}
+          onChange={handleChange}
             fullWidth
             rows={1}
             placeholder="Origen"
@@ -143,8 +190,11 @@ const AsesoriaSex = () => {
               disableUnderline: true,
               className: classes.customTextField, // Aplicar la clase customTextField
             }}
-          /></Item>
+          /> {showError('origen') && <Typography color="error">Campo requerido</Typography>}</Item>
            <Item> <TextField
+           name="tipoMercancia"
+           value={formValues.tipoMercancia}
+           onChange={handleChange}
             fullWidth
             rows={1}
             placeholder="Tipo de mercancía"
@@ -153,10 +203,13 @@ const AsesoriaSex = () => {
               disableUnderline: true,
               className: classes.customTextField, // Aplicar la clase customTextField
             }}
-          /></Item>
+          /> {showError('tipoMercancia') && <Typography color="error">Campo requerido</Typography>}</Item>
         </Grid> 
         <Grid item xs={12} >
         <Item>   <TextField
+         name="especificaciones"  
+         value={formValues.especificaciones}
+         onChange={handleChange}
             fullWidth
             rows={1}
             placeholder="Otras Especificaciones"
@@ -166,7 +219,7 @@ const AsesoriaSex = () => {
               className: classes.customTextField,   style: { height: '161px' }
             }}
             
-          /></Item>
+          /> {showError('especificaciones') && <Typography color="error">Campo requerido</Typography>}</Item>
         </Grid>
         </Grid>  
     </Box>
@@ -177,7 +230,7 @@ const AsesoriaSex = () => {
           {/* Otros campos de texto comentados */}
           <Box style={{ display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",paddingBottom:"65px"  }}>  
           <Link to="/asesoriaSep" style={{ textDecoration: 'none' }}>
-            <Button  style={{fontSize:"20px",width:"240px", display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",backgroundColor: 'rgba(143, 13, 60, 1)', borderRadius: '40px', color: 'white' }} variant="contained">
+            <Button  onClick={handleSubmit} style={{fontSize:"20px",width:"240px", display:"flex",flexDirection:"row",justifyContent:"center",alignContent:"center",backgroundColor: 'rgba(143, 13, 60, 1)', borderRadius: '40px', color: 'white' }} variant="contained">
               Enviar
             </Button>
           </Link>    

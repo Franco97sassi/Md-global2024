@@ -48,7 +48,7 @@ const AsesoriaCuar = () => {
         <img src={asesoria1} alt="" />
          
         <Typography style={{ marginTop: '7px', color: "#8F0D3C",fontSize:"30px" }}>
-    Maritimo
+        Marítimo
     </Typography>
           </Box></Link>  
        <Link to="/asesoriaQuin">  <Box style={{

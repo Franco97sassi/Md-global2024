@@ -100,7 +100,7 @@ const AsesoriaQuin = () => {
         <Box style={{  
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',color:"rgba(143, 13, 60, 1)",
             fontWeight:700,
-              width: isNonMobileScreens?"1124px":"90%", height: "47px", borderRadius: "40px", padding: '0 20px'
+              width: isNonMobileScreens?"640px":"50%", height: "47px", borderRadius: "40px", padding: '0 20px'
           }}>
            <Typography style={{fontWeight:700}}>Concepto</Typography>
            <Typography style={{fontWeight:700}}>Importación</Typography>
@@ -119,7 +119,7 @@ const AsesoriaQuin = () => {
         <Box style={{  
             display: 'flex', justifyContent: 'space-between', alignItems: 'center',color:"rgba(143, 13, 60, 1)",
             fontWeight:700,
-            width: isNonMobileScreens?"1124px":"50%",height: "47px", borderRadius: "40px", padding: '0 20px'
+            width: isNonMobileScreens?"640px":"50%",height: "47px", borderRadius: "40px", padding: '0 20px'
           }}>
             <Typography style={{fontWeight:700}}>Total</Typography>
             <Typography  style={{fontWeight:700}}>$11.450,00</Typography>

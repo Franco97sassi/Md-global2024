@@ -72,6 +72,7 @@ function Servicios() {
                   margin: "20px",
                   height: "fit-content",
                   alignSelf: "center",
+                  backgroundColor: 'transparent'
                 }}
                 onClick={prevSlide}
               >
@@ -95,6 +96,7 @@ function Servicios() {
                   transform: "rotate(180deg)",
                   alignSelf: "center",
                   height: "fit-content",
+                  backgroundColor: 'transparent'
                 }}
                 onClick={nextSlide}
               >

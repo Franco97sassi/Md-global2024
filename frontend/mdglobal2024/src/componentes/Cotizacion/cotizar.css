@@ -1,0 +1,7 @@
+.hoverableBox {
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .hoverableBox:hover {
+    transform: scale(1.05); /* Puedes ajustar el valor según lo que desees */
+  }

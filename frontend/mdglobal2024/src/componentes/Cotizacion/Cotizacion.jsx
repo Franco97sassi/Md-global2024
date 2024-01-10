@@ -8,7 +8,7 @@ import Footer from "../Footer";
 import { Link } from 'react-router-dom';
 import HamburguesaMenu from '../Menu';
 import { isMobile } from 'react-device-detect';
-
+import './cotizar.css'
 const useStyles = makeStyles({
   centeredText: {
     textAlign: 'center',
@@ -45,7 +45,7 @@ const Cotizacion = () => {
       flexDirection:isNonMobileScreens?"row":"column",
        justifyContent: 'center', width: '100%' ,gap:isNonMobileScreens?"103px":"0px",paddingBottom:"3.25em",
         }}>
-        <Box >  
+        <Box className='hoverableBox'>  
         <Link to="/asesoriaPrim">
           
 
@@ -54,7 +54,7 @@ const Cotizacion = () => {
 
           
         </Link></Box>
-        <Box>  <Link to="/asesoriaSeg">
+        <Box className='hoverableBox'>  <Link to="/asesoriaSeg">
           <img src={cotizacionCotizar} alt=""  width={isNonMobileScreens?'100%' : '90%'} height={isNonMobileScreens?'100%' : 'auto'} />
         </Link></Box>
          </Box>

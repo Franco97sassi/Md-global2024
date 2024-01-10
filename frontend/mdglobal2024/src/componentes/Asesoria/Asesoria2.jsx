@@ -7,6 +7,7 @@ import Footer from '../Footer'
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
 import HamburguesaMenu from '../Menu'
+import '../Cotizacion/cotizar.css'
 
 const useStyles = makeStyles({
   centeredText: {
@@ -30,13 +31,13 @@ const AsesoriaSeg = () => {
         <Typography style={{ fontSize: isNonMobileScreens?'1.875em':"1em" ,paddingBottom:"63px" }} className={classes.centeredText}>
         Con nuestras asesorías puedes aclarar tus ideas para tus proyectos de importación
         </Typography>
-        <Box style={{ display: 'flex', 
+        <Box  style={{ display: 'flex', 
                     flexDirection:isNonMobileScreens?"row":"column",
 
         justifyContent: 'center',gap:"103px", width: '100%' }}>
              <Link to="/asesoriaTer"> 
 
-         <Box style={{
+         <Box className='hoverableBox'style={{
   width: isNonMobileScreens ? '37.9375em' : '70%', // Ancho relativo en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
@@ -56,7 +57,7 @@ const AsesoriaSeg = () => {
     </Typography>
      </Box>  </Link>
     <Link to="/asesoriaSex">
-    <Box style={{
+    <Box className='hoverableBox' style={{
   width: isNonMobileScreens ? '37.9375em' : '70%', // Ancho relativo en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',

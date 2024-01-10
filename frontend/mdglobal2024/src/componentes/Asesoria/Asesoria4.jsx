@@ -9,7 +9,7 @@ import Footer from '../Footer'
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
 import HamburguesaMenu from '../Menu'
-
+import '../Cotizacion/cotizar.css'
 const useStyles = makeStyles({
   centeredText: {
     textAlign: 'center',
@@ -34,7 +34,7 @@ const AsesoriaCuar = () => {
         </Typography>
         <Box style={{ display: 'flex',flexDirection:isNonMobileScreens?"row":"column", justifyContent: 'center', width: '100%',gap:"65px" }}>
         <Link to="/asesoriaQuin"> 
-        <Box style={{
+        <Box className='hoverableBox ' style={{
   width: isNonMobileScreens ? '27.635em' : '70%', // Ancho más pequeño en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   borderRadius:"40px",
@@ -51,7 +51,7 @@ const AsesoriaCuar = () => {
         Marítimo
     </Typography>
           </Box></Link>  
-       <Link to="/asesoriaQuin">  <Box style={{
+       <Link to="/asesoriaQuin">  <Box className='hoverableBox ' style={{
   width: isNonMobileScreens ? '27.635em' : '70%', // Ancho más pequeño en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   borderRadius:"40px",
@@ -66,7 +66,7 @@ const AsesoriaCuar = () => {
     Aéreo
     </Typography>
     </Box></Link>
-    <Link to="/asesoriaQuin">  <Box style={{
+    <Link to="/asesoriaQuin">  <Box className='hoverableBox ' style={{
   width: isNonMobileScreens ? '27.635em' : '70%', // Ancho más pequeño en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   borderRadius:"40px",

@@ -7,7 +7,7 @@ import Footer from '../Footer'
 import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
 import HamburguesaMenu from '../Menu'
-
+import '../Cotizacion/cotizar.css'
 const useStyles = makeStyles({
   centeredText: {
     textAlign: 'center',
@@ -35,7 +35,7 @@ const AsesoriaPrim = () => {
 
        justifyContent: 'center',gap:"103px", width: '100%' }}>
 
-<Box style={{
+<Box className='hoverableBox ' style={{
   width: isNonMobileScreens ? '37.9375em' : '70%', // Ancho relativo en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
@@ -54,7 +54,7 @@ const AsesoriaPrim = () => {
             Quiero una llamada
           </Typography>
         </Box>
-        <Box style={{
+        <Box className='hoverableBox ' style={{
   width: isNonMobileScreens ? '37.9375em' : '70%', // Ancho relativo en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
   boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',

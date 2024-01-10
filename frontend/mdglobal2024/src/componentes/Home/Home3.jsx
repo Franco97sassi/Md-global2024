@@ -37,13 +37,14 @@ function Home3() {
           flexDirection: "column",
           alignItems: "center",
           color: "white",
+    
           
         }}
       >
         <span className="textoHOME3"
           style={{
             fontWeight: "bold",
-
+            marginTop: isMobile ? null : '15rem' ,
             maxWidth: isMobile ? '300px' : null,
             lineHeight: "50px",
           }}

@@ -9,6 +9,7 @@ import  Paper  from '@mui/material/Paper';
 import { Link } from 'react-router-dom';
 import HamburguesaMenu from '../Menu';
 import { isMobile } from 'react-device-detect';
+import '../Home/styles.css'
 
 
 const Item = styled(Paper)(({ theme }) => ({
@@ -54,12 +55,24 @@ const Nosotros = () => {
 
           </Typography>
           <Link to="/aduanas">  
-          <Button
-        variant="contained"
-        style={{marginTop:"9px",marginBottom:"25px",width:"240px",fontSize:isNonMobileScreens?"20px":"1em",  backgroundColor: 'rgba(143, 13, 60, 1)',borderRadius:"40px", color: 'white' }} // Color de fondo rojo y texto blanco
+          <button className='botonHome1'
+   
+        style={{
+          
+          color: "white",
+          paddingLeft: "2.5rem",
+          paddingRight: "2.5rem",
+          borderRadius: "1.5rem",
+          marginRight: "1rem",
+          width: "240px",
+          height: "43px",
+          fontSize: "20px",
+          boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+          cursor: "pointer"
+        }} // Color de fondo rojo y texto blanco
       >
         Aduanas
-      </Button></Link>
+      </button></Link>
         </Grid>
         
       </Grid>

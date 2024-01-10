@@ -3,6 +3,7 @@ import { isMobile } from "react-device-detect";
 import Home2 from "./Home2";
 import construccion from "../../assets/Home/homeConstruccion.png";
 import Home3 from "./Home3";
+import rectanguloCurveado from "../../assets/Home/Subtract.png";
 import rectangulo from "../../assets/Home/rectangulo.png";
 import Footer from "../Footer";
 import "./styles.css";
@@ -73,26 +74,26 @@ function Home() {
                   gap: "1rem",
                 }}
               >
-                <Link to={'/cotizar'}>
-                <button
-                  className="botonHome1"
-                  style={{
-                    color: "white",
-                    paddingLeft: "2.5rem",
-                    paddingRight: "2.5rem",
-                    borderRadius: "1.5rem",
-                    marginRight: "1rem",
-                    width: "240px",
-                    height: "43px",
-                    fontSize: "20px",
-                    boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
-                    cursor: "pointer"
-                  }}
-                >
-                  Cotizar ahora
-                </button>
+                <Link to={"/cotizar"}>
+                  <button
+                    className="botonHome1"
+                    style={{
+                      color: "white",
+                      paddingLeft: "2.5rem",
+                      paddingRight: "2.5rem",
+                      borderRadius: "1.5rem",
+                      marginRight: "1rem",
+                      width: "240px",
+                      height: "43px",
+                      fontSize: "20px",
+                      boxShadow: "0 4px 8px rgba(0, 0, 0, 0.3)",
+                      cursor: "pointer",
+                    }}
+                  >
+                    Cotizar ahora
+                  </button>
                 </Link>
-                <Link to={('/servicios')}>
+                <Link to={"/servicios"}>
                   {" "}
                   <button
                     className="botonHome2"
@@ -104,7 +105,7 @@ function Home() {
                       width: "240px",
                       height: "43px",
                       fontSize: "20px",
-                      cursor: "pointer"
+                      cursor: "pointer",
                     }}
                   >
                     Más servicios
@@ -131,16 +132,22 @@ function Home() {
           </div>
         </section>
         <section
-          style={{
-            backgroundImage: `url(${rectangulo})`,
-            backgroundSize: "cover",
-            backgroundPosition: "center",
-            height: isMobile ? "1500px" : "835px",
-            width: "100vw",
-          }}
-        >
-          <Home3></Home3>
-        </section>
+  style={{
+    backgroundImage: isMobile ? `url(${rectangulo})` : `url(${rectanguloCurveado})`,
+    backgroundSize: isMobile ? "cover" : "100% 100%",
+    backgroundPosition: "center",
+    backgroundRepeat: window.innerWidth > 1650 ? "repeat-x" : "no-repeat",
+    height: isMobile ? "1500px" : "835px",
+    width: "100vw",
+    margin: 0,
+    padding: 0,
+  }}
+>
+  <Home3></Home3>
+</section>
+
+
+
         <section>
           <Home2></Home2>
         </section>

@@ -39,9 +39,14 @@ function Footer() {
       </div>
         <div style={{marginRight: '5%'}}>
             <div style={{display: 'flex' , marginBottom: '1rem',flexDirection: 'row', justifyContent: 'flex-end' , gap: '2px'}}>
-              <img style={{height: isMobile ? '20px' : null }} src={instagram} alt="" />
-              <img style={{height: isMobile ? '20px' : null }}  src={inLogo} alt="" />
-              <img  style={{height: isMobile ? '20px' : null }} src={facebook} alt="" />
+            <a style={{marginRight: '1rem'}} href="https://www.instagram.com/mdglobalgroup/" target="_blank" rel="noopener noreferrer">
+  <img style={{height: isMobile ? '20px' : '40px' }} src={instagram} alt="" />
+</a>
+
+<a href="https://www.facebook.com/MDGLOBALGROUP/" target="_blank" rel="noopener noreferrer">
+  <img style={{height: isMobile ? '20px' : '40px'}} src={facebook} alt="" />
+</a>
+
             </div>
             <span style={{justifyContent: 'flex-end' , whiteSpace: "nowrap", color: 'white'}}> {isMobile ? ('© MD GLOBAL 2023') : ('© MD GLOBAL TRADE SERVICES 2023, Todos los derechos reservados')  }</span></div>
     </div>

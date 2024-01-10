@@ -58,7 +58,7 @@ const Nosotros = () => {
           <button className='botonHome1'
    
         style={{
-          
+          marginTop: '1.5rem',
           color: "white",
           paddingLeft: "2.5rem",
           paddingRight: "2.5rem",

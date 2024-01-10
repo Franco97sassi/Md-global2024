@@ -35,25 +35,30 @@ const AsesoriaPrim = () => {
 
        justifyContent: 'center',gap:"103px", width: '100%' }}>
 
-<Box className='hoverableBox ' style={{
-  width: isNonMobileScreens ? '37.9375em' : '70%', // Ancho relativo en móviles
-  height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles
-  boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
-  display: 'flex', 
-  flexDirection: 'column',
-  justifyContent: 'center',
-  background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
-  alignItems: 'center',
-  borderRadius: "40px",
-  margin: isNonMobileScreens ? '0' : '10px auto', // Margen para centrar en móviles
-}}>
-          <img src={asesoria1} alt="" width={isNonMobileScreens ? 'auto' : '50%'} />
+<Box
+  className='hoverableBox'
+  style={{
+    width: isNonMobileScreens ? '37.9375em' : '70%',
+    height: isNonMobileScreens ? '23.875em' : 'auto',
+    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center',
+    background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
+    alignItems: 'center',
+    borderRadius: "40px",
+    margin: isNonMobileScreens ? '0' : '10px auto',
+    cursor: 'pointer', // Agregar cursor para indicar que es un enlace
+  }}
+>
+  <a href="tel:+543576472658"> {/* Reemplaza con el número de teléfono real */}
+    <img src={asesoria1} alt="" width={isNonMobileScreens ? 'auto' : '50%'} />
+    <Typography style={{ color: "#8F0D3C", fontSize: isNonMobileScreens ? "30px" : "20px", paddingTop: isNonMobileScreens ? "55px" : "5px" }}>
+      Quiero una llamada
+    </Typography>
+  </a>
+</Box>
 
-          <Typography style={{  color: "#8F0D3C", fontSize:isNonMobileScreens ?"30px":"20px",
-           paddingTop:isNonMobileScreens ?"55px":"5px"}}>
-            Quiero una llamada
-          </Typography>
-        </Box>
         <Box className='hoverableBox ' style={{
   width: isNonMobileScreens ? '37.9375em' : '70%', // Ancho relativo en móviles
   height: isNonMobileScreens ? '23.875em' : 'auto', // Altura automática en móviles

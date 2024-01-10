@@ -8,6 +8,8 @@ import { makeStyles } from '@material-ui/core/styles';
 import { Link } from 'react-router-dom'
 import HamburguesaMenu from '../Menu'
 import '../Cotizacion/cotizar.css'
+import { isMobile } from 'react-device-detect'
+
 const useStyles = makeStyles({
   centeredText: {
     textAlign: 'center',
@@ -35,25 +37,22 @@ const AsesoriaPrim = () => {
 
        justifyContent: 'center',gap:"103px", width: '100%' }}>
 
-<Box
-  className='hoverableBox'
-  style={{
-    width: isNonMobileScreens ? '37.9375em' : '70%',
-    height: isNonMobileScreens ? '23.875em' : 'auto',
-    boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
-    alignItems: 'center',
-    borderRadius: "40px",
-    margin: isNonMobileScreens ? '0' : '10px auto',
-    cursor: 'pointer', // Agregar cursor para indicar que es un enlace
-  }}
->
-  <a href="tel:+526313161408"> {/* Reemplaza con el número de teléfono real */}
-    <img src={asesoria1} alt="" width={isNonMobileScreens ? 'auto' : '50%'} />
-    <Typography style={{ color: "#8F0D3C", fontSize: isNonMobileScreens ? "30px" : "20px", paddingTop: isNonMobileScreens ? "55px" : "5px" }}>
+<Box className='hoverableBox' style={{
+  width: isNonMobileScreens ? '37.9375em' : '70%',
+  height: isNonMobileScreens ? '23.875em' : 'auto',
+  boxShadow: '0px 4px 20px rgba(0, 0, 0, 0.15)',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'center',
+  alignItems: 'center', // Centrar horizontalmente
+  background: "linear-gradient(to bottom, rgba(255, 255, 255, 1), rgba(237, 237, 237, 1)",
+  borderRadius: "40px",
+  margin: isNonMobileScreens ? '0' : '10px auto',
+  cursor: 'pointer',
+}}>
+  <a href="tel:+526313161408">
+    <img src={asesoria1} alt="" style={{  height: isMobile ? '150px' : '' , marginLeft:   '1rem' }} />
+    <Typography style={{ marginTop: '7px', color: "#8F0D3C", fontSize: isNonMobileScreens ? "30px" : "20px" }}>
       Quiero una llamada
     </Typography>
   </a>
@@ -72,7 +71,7 @@ const AsesoriaPrim = () => {
   margin: isNonMobileScreens ? '0' : '10px auto', // Margen para centrar en móviles
 }}>  
   <a href="tel:+526313161408">
-<img src={asesoria2} alt="" width={isNonMobileScreens ? 'auto' : '50%'}/>
+<img src={asesoria2} alt="" width={isMobile ? '150px' : null} style={{marginLeft:  '1rem' }}/>
           <Typography style={{ marginTop: '7px', color: "#8F0D3C", fontSize:isNonMobileScreens ?"30px":"20px" }}>
             Quiero una Reunión
           </Typography>

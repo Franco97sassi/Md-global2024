@@ -51,7 +51,7 @@ const AsesoriaPrim = () => {
     cursor: 'pointer', // Agregar cursor para indicar que es un enlace
   }}
 >
-  <a href="tel:+543576472658"> {/* Reemplaza con el número de teléfono real */}
+  <a href="tel:+526313161408"> {/* Reemplaza con el número de teléfono real */}
     <img src={asesoria1} alt="" width={isNonMobileScreens ? 'auto' : '50%'} />
     <Typography style={{ color: "#8F0D3C", fontSize: isNonMobileScreens ? "30px" : "20px", paddingTop: isNonMobileScreens ? "55px" : "5px" }}>
       Quiero una llamada
@@ -70,10 +70,13 @@ const AsesoriaPrim = () => {
   alignItems: 'center',
   borderRadius: "40px",
   margin: isNonMobileScreens ? '0' : '10px auto', // Margen para centrar en móviles
-}}>  <img src={asesoria2} alt="" width={isNonMobileScreens ? 'auto' : '50%'}/>
+}}>  
+  <a href="tel:+526313161408">
+<img src={asesoria2} alt="" width={isNonMobileScreens ? 'auto' : '50%'}/>
           <Typography style={{ marginTop: '7px', color: "#8F0D3C", fontSize:isNonMobileScreens ?"30px":"20px" }}>
             Quiero una Reunión
           </Typography>
+          </a>
         </Box>
       </Box>
       <div>

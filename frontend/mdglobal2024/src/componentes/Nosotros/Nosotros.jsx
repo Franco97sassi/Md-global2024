@@ -59,6 +59,7 @@ const Nosotros = () => {
    
         style={{
           marginTop: '1.5rem',
+          marginBottom: '1.5rem',
           color: "white",
           paddingLeft: "2.5rem",
           paddingRight: "2.5rem",
